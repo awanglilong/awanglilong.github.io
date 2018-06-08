@@ -81,7 +81,9 @@ XCTAssert(expression, format...)
     // This is an example of a performance test case.
     
     [self measureBlock:^{
+    
         // Put the code you want to measure the time of here.
+        
     }];
 }
 
@@ -108,7 +110,9 @@ XCTAssert(expression, format...)
         [expectation fulfill];//异步测试结束
     });
     [self waitForExpectationsWithTimeout:10 handler:^(NSError *error) {
+    
         //Do something when time out
+        
     }];
 }
 
@@ -200,7 +204,8 @@ XCTAssert(expression, format...)
     
     OCMVerify([mockView addTweet:testTweet]);
     OCMVerify([mockView addTweet:testTweet2]);
-    OCMVerify([mockView addTweet:[OCMArg any]]);   ///[OCMArg any]匹配所有的参数值，既testTweet和testTweet2
+    OCMVerify([mockView addTweet:[OCMArg any]]);   
+    //[OCMArg any]匹配所有的参数值，既testTweet和testTweet2
     
     
     //失败，因为执行[controller updateTweetView];的时候，mockView没有添加testTweet3，所以验证不通过
@@ -220,9 +225,11 @@ XCTAssert(expression, format...)
     
     id classMock = OCMClassMock([TweetView class]);
     //这个classMock需要执行addTweet方法且参数不为nil。  不然的话会抛出异常
+    
     OCMExpect([classMock addTweet:[OCMArg isNotNil]]);
 
     /* 如果不执行以下代码的话会抛出异常 */
+    
 //    Tweet *testTweet = [[Tweet alloc] init];
 //    testTweet.userName = @"齐滇大圣";
 //    [classMock addTweet:testTweet];
