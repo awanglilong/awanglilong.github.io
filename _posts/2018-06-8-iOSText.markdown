@@ -23,6 +23,7 @@ tags:
 2.XCTest中所有的测试用例的命名都是以test开头的
 
 ```objc
+
 #import <XCTest/XCTest.h>
 
 @interface StudentModeTests : XCTestCase
@@ -66,7 +67,8 @@ tags:
 如何判断一个测试用例成功或者失败呢？XCTest使用断言来实现。 
 最基本的断言，表示如果expression满足，则测试通过，否则对应format的错误。
 
-```
+```objc
+
 XCTAssert(expression, format...)
 
 ```
@@ -77,6 +79,7 @@ XCTAssert(expression, format...)
 格式如下
 
 ```objc
+
 - (void)testPerformanceExample {
     // This is an example of a performance test case.
     
@@ -146,6 +149,7 @@ XCTAssert(expression, format...)
 （1）简单的例子，为类的方法设置固定返回
 
 ```objc
+
 //最简单的一个使用OCMock的例子
 - (void)testPersonNameEqual{
     
@@ -221,6 +225,7 @@ XCTAssert(expression, format...)
 （3）条件限定
 
 ```objc
+
 - (void)testStrictMock3{
     
     id classMock = OCMClassMock([TweetView class]);
