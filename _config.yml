@@ -1,25 +1,27 @@
 # Site settings
-title: Hux Blog
-SEOTitle: 龙龙的博客 | Hux Blog
+title: longlong Blog
+SEOTitle: 龙龙的博客 | longlong Blog
 header-img: img/home-bg.jpg
 email: 571275935@qq.com
 description: "关于前端与设计、黑客与画家 | 黄玄，Web & Mobile Lover，Software Engineer，UX Designer | 这里是 @Hux黄玄 的个人博客，与你一起发现更大的世界。"
-keyword: "龙龙, Hux龙龙, Hux Blog, 博客, 个人网站, 互联网, Web, iOS , 移动开发”
-url: "https://awanglilong.github.io"              # your host, for absolute URL
+keyword: "黄玄, Hux黄玄, Hux, 鬼栈, huxpro, @huxpro, 黄玄的博客, Hux Blog, 博客, 个人网站, 互联网, Web, JavaScript, 前端, 设计"
+url: "https://awanglilong.github.io/"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
-
+# Publish posts or collection documents with a future date.
+future: true
 
 # SNS settings
 RSS: false
 zhihu_username:     awanglilong
 github_username:    awanglilong
-# linkedin_username:  firstname-lastname-idxxxx
+#facebook_username:  huxpro
+#linkedin_username:  firstname-lastname-idxxxx
 
 
 
 # Build settings
-# from 2018, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
+# from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
 highlighter: rouge
 permalink: pretty
 paginate: 10
@@ -30,7 +32,7 @@ anchorjs: true                          # if you want to customize anchor. check
 
 # Gems
 # from PR#40, to support local preview for Jekyll 3.0
-gems: [jekyll-paginate]
+plugins: [jekyll-paginate]
 
 
 
@@ -45,9 +47,9 @@ kramdown:
 
 
 # Disqus settings
-disqus_username: longlong
+disqus_username: hux
 
-# Netease setttings
+# Netease settings
 netease_comment: false
 
 
@@ -84,10 +86,10 @@ service-worker: true
 # Friends
 friends: [
     {
-        title: "尹峰以为",
-        href: "http://ingf.github.io/"
+        title: "乱序",
+        href: "http://mida.re/"
     },{
-        title: "解旻的博客",
-        href: "http://xieminis.me/"
+        title: "前端外刊评论",
+        href: "http://qianduan.guru/"
     }
 ]
