@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "iOS单元测试"
-subtitle:   " \"Hello World, Hello Blog\""
+subtitle:   " \"敏捷开发前提\""
 date:       2018-06-8 14:00:00
 author:     "wanglilong"
 header-img: "img/post-bg-2015.jpg"
@@ -95,7 +95,8 @@ XCTAssert(expression, format...)
 性能测试的时候，如何判一个性能测试case是成功还是失败呢？
 
 需要有个基准，第一次运行后点击灰色点进行设置
-![](基准.png)
+
+![](img/post-ios-test/post-iOS-test-base.png)
 
 ### 五、异步测试
 
@@ -248,11 +249,12 @@ XCTAssert(expression, format...)
 一个软件覆盖度在50%以上就可以称为一个健壮的软件了，要达到70，80这些已经是非常难了，不过我们常见的一些第三方开源框架的测试用例覆盖率还是非常高的，让人咋舌。例如，AFNNetWorking的覆盖率高达87%,SDWebImage的覆盖率高达77%。
 
 选择Target，然后选择Test模块，然后勾选Gather coverage data
-![](覆盖率1.png)
+
+![](img/post-ios-test/post-iOS-test-cover-one.png)
 
 然后，在report模块中，就能看到每一个.m文件的代码覆盖情况了。
 
-![](覆盖率2.png)
+![](img/post-ios-test/post-iOS-test-cover-two.png)
 
 #### 八、参考博客
 
