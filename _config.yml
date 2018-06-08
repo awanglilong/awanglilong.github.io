@@ -13,7 +13,7 @@ future: true
 
 # SNS settings
 RSS: false
-zhihu_username:     awanglilong
+zhihu_username:     li-wang-9-93
 github_username:    awanglilong
 #facebook_username:  huxpro
 #linkedin_username:  firstname-lastname-idxxxx
@@ -86,10 +86,10 @@ service-worker: true
 # Friends
 friends: [
     {
-        title: "乱序",
-        href: "http://mida.re/"
+        title: "算法动画",
+        href: "https://visualgo.net/en"
     },{
-        title: "前端外刊评论",
-        href: "http://qianduan.guru/"
+        title: "图标",
+        href: "http://iconfont.cn/"
     }
 ]
