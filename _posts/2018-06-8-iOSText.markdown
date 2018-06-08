@@ -11,12 +11,12 @@ tags:
 ---
 # iOS单元测试
 
-### 一、为什么需要单元测试
+## 一、为什么需要单元测试
 1.对于已稳定的功能，单元测试可以测试是否引入新的错误。
 
 2.对于要重构的代码，单元测试是重构能否顺利进行的前提。
 
-### 二、苹果自带的XCTest
+## 二、苹果自带的XCTest
 
 1.XCTest中的测试类都是继承自XCTestCase
 
@@ -63,7 +63,7 @@ tags:
 
 ```
 
-### 三、断言
+## 三、断言
 如何判断一个测试用例成功或者失败呢？XCTest使用断言来实现。 
 最基本的断言，表示如果expression满足，则测试通过，否则对应format的错误。
 
@@ -73,7 +73,7 @@ XCTAssert(expression, format...)
 
 ```
 
-### 四、性能测试
+## 四、性能测试
 所谓性能测试，主要就是评估一段代码的运行时间
 
 格式如下
@@ -96,9 +96,9 @@ XCTAssert(expression, format...)
 
 需要有个基准，第一次运行后点击灰色点进行设置
 
-![](img/post-ios-test/post-iOS-test-base.png)
+![](/img/post-ios-test/post-iOS-test-base.png)
 
-### 五、异步测试
+## 五、异步测试
 
 异步测试的逻辑如下，首先定义一个或者多个XCTestExpectation，表示异步测试想要的结果。然后设置timeout，表示异步测试最多可以执行的时间。最后，在异步的代码完成的最后，调用fullfill来通知异步测试满足条件。
 
@@ -122,9 +122,9 @@ XCTAssert(expression, format...)
 
 ```
 
-### 六、第三方框架
-#### 框架OCMock
-##### 1.什么是mock测试
+## 六、第三方框架
+### 框架OCMock
+#### 1.什么是mock测试
 对于一些不容易构造或不容易获取的对象，此时你可以创建一个虚拟的对象（mock object）来完成测试。
 
 例如你可能要尝试100次才会返回一个`NSError`，通过`mock object`你可以自行创建一个`NSError`对象，测试在出错情况下程序的处理是否符合你的预期。
@@ -245,18 +245,18 @@ XCTAssert(expression, format...)
 
 ```
 
-### 七、代码覆盖率
+## 七、代码覆盖率
 一个软件覆盖度在50%以上就可以称为一个健壮的软件了，要达到70，80这些已经是非常难了，不过我们常见的一些第三方开源框架的测试用例覆盖率还是非常高的，让人咋舌。例如，AFNNetWorking的覆盖率高达87%,SDWebImage的覆盖率高达77%。
 
 选择Target，然后选择Test模块，然后勾选Gather coverage data
 
-![](img/post-ios-test/post-iOS-test-cover-one.png)
+![](/img/post-ios-test/post-iOS-test-cover-one.png)
 
 然后，在report模块中，就能看到每一个.m文件的代码覆盖情况了。
 
-![](img/post-ios-test/post-iOS-test-cover-two.png)
+![](/img/post-ios-test/post-iOS-test-cover-two.png)
 
-#### 八、参考博客
+## 八、参考博客
 
 [iOS 单元测试之XCTest详解](https://blog.csdn.net/hello_hwc/article/details/46671053)
 
