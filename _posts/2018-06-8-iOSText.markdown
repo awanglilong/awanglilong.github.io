@@ -39,18 +39,21 @@ tags:
 /** 单元测试结束前调用 */
 - (void)tearDown {
     // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
     [super tearDown];
 }
 
 /** 测试代码可以写到以test开头的方法中 并且test开头的方法左边会生成一个菱形图标，点击即可运行检测当前test方法内的代码 **/
 - (void)testExample {
     // This is an example of a functional test case.
+    
     // Use XCTAssert and related functions to verify your tests produce the correct results.
 }
 
 /** 测试性能 */
 - (void)testPerformanceExample {
     // This is an example of a performance test case.
+    
     [self measureBlock:^{
         // Put the code you want to measure the time of here.
     }];
@@ -76,6 +79,7 @@ XCTAssert(expression, format...)
 ```objc
 - (void)testPerformanceExample {
     // This is an example of a performance test case.
+    
     [self measureBlock:^{
         // Put the code you want to measure the time of here.
     }];
@@ -144,11 +148,15 @@ XCTAssert(expression, format...)
     Person *person = [[Person alloc] init];
     
     //创建一个mock对象
+    
     id mockClass = OCMClassMock([Person class]);
+    
     //可以给这个mock对象的方法设置预设的参数和返回值
+    
     OCMStub([mockClass getPersonName]).andReturn(@"齐滇大圣");
     
     //用这个预设的值和实际的值进行比较是否相等
+    
     XCTAssertEqualObjects([mockClass getPersonName], [person getPersonName], @"值相等");
 }
 
@@ -163,10 +171,12 @@ XCTAssert(expression, format...)
     TwitterViewController *controller = [[TwitterViewController alloc] init];
     
     //模拟出来一个网络连接请求数据的类
+    
     id mockConnection = OCMClassMock([TwitterConnection class]);
     controller.connection = mockConnection;
     
     //模拟fetchTweets方法返回预设值
+    
     Tweet *testTweet = [[Tweet alloc] init];
     testTweet.userName = @"齐滇大圣";
     Tweet *testTweet2 = [[Tweet alloc] init];
@@ -175,22 +185,26 @@ XCTAssert(expression, format...)
     OCMStub([mockConnection fetchTweets]).andReturn(tweetArray);
     
     //模拟出来一个view类
+    
     id mockView = OCMClassMock([TweetView class]);
     controller.tweetView = mockView;
     
     //这里执行updateTweetView之后，[mockView addTweet:]加入了testTweet和testTweet2
+    
     [controller updateTweetView];
     
     
     //---------验证使用对应参数的方法是否被调用-----------
     
     //成功
+    
     OCMVerify([mockView addTweet:testTweet]);
     OCMVerify([mockView addTweet:testTweet2]);
     OCMVerify([mockView addTweet:[OCMArg any]]);   ///[OCMArg any]匹配所有的参数值，既testTweet和testTweet2
     
     
     //失败，因为执行[controller updateTweetView];的时候，mockView没有添加testTweet3，所以验证不通过
+    
     Tweet *testTweet3 = [[Tweet alloc] init];
     testTweet3.userName = @"斗战胜佛";
     OCMVerify([mockView addTweet:testTweet3]);
