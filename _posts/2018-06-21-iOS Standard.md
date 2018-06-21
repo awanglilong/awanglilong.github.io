@@ -17,7 +17,7 @@ tags:
 ## 命名规范
 >代码中的命名严禁使用拼音与英文混合的方式,更不允许直接使用中文的方式。正确的英文拼写和语法可以让阅读者易于理解,避免歧义。
 >
->*注意：即使纯拼音命名方式也要避免采用。但alibab、taobao、youku、hangzhou等国际通用的名称，可视同英文.
+>注意：即使纯拼音命名方式也要避免采用。但alibab、taobao、youku、hangzhou等国际通用的名称，可视同英文.
 
 	大驼峰规则：每个单词的首字母大写。例：NameTextField。
 	小驼峰原则：第一个单词首字母小写，其余都大写。例：nameTextField。
@@ -57,10 +57,14 @@ tags:
 
 ```objc
 #pragma mark - life cycle
+
 #pragma mark - event response
+
 #pragma mark - UITableViewDelegate && UITableViewDataSource
 （代理顺序往下排列）
+
 #pragma mark - getters and setters
+
 #pragma mark - private
 
 ```
@@ -86,6 +90,7 @@ tags:
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    
 }
 #pragma mark - private 
 
@@ -97,6 +102,7 @@ tags:
 #pragma mark - CTAPIManagerCallBackDelegate
 
 #pragma mark - getters and setters
+
 - (UIButton *)textBtn
 {
     if (_textBtn == nil) {
@@ -153,10 +159,15 @@ tags:
 ```objc
 //
 //  MyViewController.m
+
 //  text
+
 //
+
 //  Created by mac on 2017/9/12.
+
 //  Copyright © 2017年 mac. All rights reserved.
+
 //
 
 ```
@@ -174,6 +185,7 @@ tags:
 - (void)text
 {
     //测试按钮事件响应
+    
 }
 
 ```
@@ -184,14 +196,19 @@ tags:
 ```objc
 @interface DeliveryModel : NSObject
 ///提货劵所在商圈id
+
 @property (nonatomic, assign) long long mallId;
 ///商圈全称
+
 @property (nonatomic, copy) NSString *mallFullName;
 ///商圈简称
+
 @property (nonatomic, copy) NSString *mallShortName;
 ///提货劵号
+
 @property (nonatomic, copy) NSString *credentialsCode;
 ///总金额
+
 @end
 
 ```
