@@ -57,14 +57,10 @@ tags:
 
 ```objc
 #pragma mark - life cycle
-
 #pragma mark - event response
-
 #pragma mark - UITableViewDelegate && UITableViewDataSource
 （代理顺序往下排列）
-
 #pragma mark - getters and setters
-
 #pragma mark - private
 
 ```
@@ -159,15 +155,10 @@ tags:
 ```objc
 //
 //  MyViewController.m
-
 //  text
-
 //
-
 //  Created by mac on 2017/9/12.
-
 //  Copyright © 2017年 mac. All rights reserved.
-
 //
 
 ```
@@ -184,8 +175,7 @@ tags:
  */
 - (void)text
 {
-    //测试按钮事件响应
-    
+    //测试按钮事件响应   
 }
 
 ```
@@ -196,19 +186,13 @@ tags:
 ```objc
 @interface DeliveryModel : NSObject
 ///提货劵所在商圈id
-
 @property (nonatomic, assign) long long mallId;
 ///商圈全称
-
 @property (nonatomic, copy) NSString *mallFullName;
 ///商圈简称
-
 @property (nonatomic, copy) NSString *mallShortName;
 ///提货劵号
-
 @property (nonatomic, copy) NSString *credentialsCode;
-///总金额
-
 @end
 
 ```
