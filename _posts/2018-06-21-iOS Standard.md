@@ -22,10 +22,10 @@ tags:
 	大驼峰规则：每个单词的首字母大写。例：NameTextField。
 	小驼峰原则：第一个单词首字母小写，其余都大写。例：nameTextField。
 	
-### 项目命名
+#### 项目命名
 项目名都遵循大驼峰命名。例如：AoRiseProject。
 
-### 类名
+#### 类名
 类的命名都遵循大驼峰命名。一般是：前缀 + 功能 + 类型。例如：`MW + Login + ViewController`。
 
 | 控件名 | 类型 | 示例 |
@@ -53,7 +53,7 @@ tags:
 |数据库类 |DataBase、表名+DBHelper| MWFriendDataBase、MWUserTableDBHelper|
 |类目|XXX+（范围，例如Extension， Additions 或者功能，例如Frame，Nib，Block）|MWUIButton+Additions、MWUIButton+Block|
 
-### UIViewController书写规范
+#### UIViewController书写规范
 
 ```objc
 #pragma mark - life cycle
@@ -112,7 +112,7 @@ tags:
 
 ```
 
-### 变量和方法
+#### 变量和方法
 
 变量和方法的命名都遵循小驼峰命名。例如：textVariableStr, - (void)textAction响应事件。
 
@@ -135,13 +135,13 @@ tags:
 | - (void)loadMoreData | 加载更多数据| 
 | - (void)setupUI | 加载布局（一般情况下VC中都会有这个方法）| 
 
-### 常量
+#### 常量
 
 宏：小写k+大驼峰 即为：`#define kUserAgeKey @“ageKey”`
 
 全局常量：工程前+缀全大写，下划线隔开 即为：`extern const NSString MW_USER_AGE_KEY`
 
-### 参数名
+#### 参数名
 参数名以小驼峰命名，尽量参考苹果原生方法风格编写。尽量可读性好，看到方法名就知道这个方法是用来干什么的。参数应该避免用单个字符命名。例：`- (void)setDataImageUrl:(NSString *)imageUrl name:(NSString *)nameStr content:(NSString *)contentStr`
 
 
@@ -149,7 +149,7 @@ tags:
 
 为了减少他人阅读你代码的痛苦值，请在关键地方做好注释。
 
-### 类注释
+#### 类注释
 ```objc
 //
 //  MyViewController.m
@@ -163,7 +163,7 @@ tags:
 
 该注释是自动生成的，在xcode中设置即可。Created by 电脑用户名on 创建该文件的时间。Copyright 2017 后面的名字。具体可在xcode工程，Project Document中设置。这样便可在每次新建类的时候自动加上该头注释。
 
-### 方法注释
+#### 方法注释
 
 >方法注释，方法外部统一用option + command + /，方法内部统一用//注释。
 
@@ -178,7 +178,7 @@ tags:
 
 ```
 
-### 模型注释
+#### 模型注释
 每个model中的，包含的每个属性，都必须要写上相对应的注释，用///注释。阅读者一看这个model，就清楚知道model中的每个字段代表的意思，用来做什么事情的。
 
 ```objc
@@ -221,7 +221,7 @@ tags:
 * 比较大的代码块需要给出注释。
 
 ## 资源文件规范
-### 资源文件命名
+#### 资源文件命名
 全部小写，采用下划线命名法，加前缀区分。所有的资源文件都需要加上工程前缀（小写形式）。
 命名模式：可加后缀_small表示小图,_big表示大图，逻辑名称可由多个单词加下划线组成，采用以下规则：
 
@@ -241,7 +241,7 @@ tags:
 |分割线相关 |`mw_div_` |`mw_ic_home_location`、`mw_bg_input` |
 |默认相关 |`mw_def_ ` |`mw_ic_home_location`、`mw_bg_input` |
 
-### 文件夹命名
+#### 文件夹命名
 
 创建文件夹最好创建实体文件夹，找到工程目录，创建相应文件夹并拖入工程。文件夹命名使用相应模块结构分层的英文，首字母要大写。例：Model，View，Controller，Tool，Other，Service等等。
 
