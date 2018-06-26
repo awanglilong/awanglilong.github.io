@@ -52,7 +52,7 @@ build \
 
 `-archivePath `指定ProjectName.xcarchive文件的路径
 
-```shell
+```objc
 xcodebuild 
 -exportArchive 
 -archivePath build/$Project_Name_TEST-adhoc.xcarchive 
@@ -66,7 +66,7 @@ xcodebuild
 file 指定ipa所在位置
 _api_key 是在蒲公英上apiKey
 
-```shell
+```objc
 #执行上传至蒲公英的命令
 curl -F  file=@${IPA_PATH}  -F  _api_key=${apiKey}  https://www.pgyer.com/apiv2/app/upload
 
@@ -77,7 +77,7 @@ curl -F  file=@${IPA_PATH}  -F  _api_key=${apiKey}  https://www.pgyer.com/apiv2/
 #### 上传到AppStore
 使用altool
 
-```shell
+```objc
 #altool 简单示例
 #validate
 "$altoolPath" --validate-app -f "$ipaPath" -u "$appleid" -p "$applepassword" -t ios --output-format xml
