@@ -34,7 +34,7 @@ tags:
 
 `-archivePath`指定生成ProjectName.xcarchive文件的路径
 
-```
+```shell
 #xcodebuild  clean，archive出.xcarchive
 xcodebuild  \
 -workspace "$Workspace.xcworkspace" \
@@ -52,7 +52,7 @@ build \
 
 `-archivePath `指定ProjectName.xcarchive文件的路径
 
-```
+```shell
 xcodebuild 
 -exportArchive 
 -archivePath build/$Project_Name_TEST-adhoc.xcarchive 
@@ -66,7 +66,7 @@ xcodebuild
 file 指定ipa所在位置
 _api_key 是在蒲公英上apiKey
 
-```
+```shell
 #执行上传至蒲公英的命令
 curl -F  file=@${IPA_PATH}  -F  _api_key=${apiKey}  https://www.pgyer.com/apiv2/app/upload
 
@@ -77,7 +77,7 @@ curl -F  file=@${IPA_PATH}  -F  _api_key=${apiKey}  https://www.pgyer.com/apiv2/
 #### 上传到AppStore
 使用altool
 
-```
+```shell
 #altool 简单示例
 #validate
 "$altoolPath" --validate-app -f "$ipaPath" -u "$appleid" -p "$applepassword" -t ios --output-format xml
@@ -92,5 +92,7 @@ curl -F  file=@${IPA_PATH}  -F  _api_key=${apiKey}  https://www.pgyer.com/apiv2/
 
 参考
 [iOS自动签名打包](https://www.cnblogs.com/CoderHong/p/8931562.html)
+
 [Xcode一键发布到AppStore](https://blog.csdn.net/gukong/article/details/51578618)
+
 [iOS开发系列-自动化分发测试打包](https://www.cnblogs.com/CoderHong/p/8931562.html)
