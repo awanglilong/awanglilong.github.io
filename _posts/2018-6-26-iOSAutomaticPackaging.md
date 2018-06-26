@@ -15,16 +15,23 @@ tags:
 项目在测试阶段需要频繁打包给测试人员，对于这些固定化的操作我们可以使用自动化的手段去解决，将时间放在有意义的事情上。
 
 脚本将分为三个步骤
+
 1.`xcodebuild archive`生成ProjectName.xcarchive文件
+
 2.`xcodebuild -exportArchive`将1步骤中的.xcarchive生成ipa安装包
+
 3.上传ipa包到平台
 
 ### xcodebuild打包
 #### 生成.xcarchive文件
 `-workspace`指定想要编译的工程
+
 `-scheme`指定对应的scheme
+
 `-allowProvisioningUpdates`允许自动获取证书，需要在Xcode上勾选Automatically manage signing
+
 `-configuration`指定配置文件
+
 `-archivePath`指定生成ProjectName.xcarchive文件的路径
 
 ```
