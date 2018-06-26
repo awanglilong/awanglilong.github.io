@@ -88,7 +88,7 @@ curl -F  file=@${IPA_PATH}  -F  _api_key=${apiKey}  https://www.pgyer.com/apiv2/
 ```
 
 
-[自动上传脚本](iOS自动化上传脚本.zip)
+[自动上传脚本](https://pan.baidu.com/s/1qiPfOgtxLVW5Xij23z85TA)
 
 参考
 [iOS自动签名打包](https://www.cnblogs.com/CoderHong/p/8931562.html)
