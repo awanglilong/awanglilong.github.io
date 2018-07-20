@@ -17,8 +17,7 @@ tags:
    那么`getAllStudent`需要方法`getAllStudentFromNetWork`的返回数据。如果是同步网络请求，直接使用方法返回数据就好，如果是异步线程，就只能使用方法调用来返回数据来。
    类图结构如下图
 
-![](/img/Post-Protocol-Block/协议与block1.png)
-
+![](/img/post-protocol-block/protocol-block1.png)
 ## 出现的问题
    如果是只有一个`Student`类中使用网络请求那没有什么问题。
    
@@ -35,7 +34,7 @@ tags:
    
    但是我们需要知道哪些类里添加了协议，就有了实现协议。
    
-   ![](/img/Post-Protocol-Block/协议与block3.png)
+   ![](/img/post-protocol-block/protocol-block3.png)
   
 ## Block
    虽然有了协议但是
@@ -54,7 +53,7 @@ tags:
    
    问题完美解决了。内存什么的先不管了。
    
-   ![](/img/Post-Protocol-Block/协议与block2.png)
+   ![](/img/post-protocol-block/protocol-block2.png)
    
    
    当然这是根据实际使用我自己的理解，没有在网上找到类似的说法。
