@@ -91,3 +91,5 @@ friends: [
         href: "http://iconfont.cn/"
     }
 ]
+
+theme: jekyll-theme-cayman
