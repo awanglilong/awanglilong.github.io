@@ -18,7 +18,7 @@
  * GitHub style for Pygments syntax highlighter, for use with Jekyll
  * Courtesy of GitHub.com
  */
-/*
+
 .highlight pre, pre, .highlight .hll { background-color: #f8f8f8; border: 1px solid #ccc; padding: 6px 10px; border-radius: 3px; }
 .highlight .c { color: #999988; font-style: italic; }
 .highlight .err { color: #a61717; background-color: #e3d2d2; }
@@ -48,7 +48,8 @@
 .highlight .kt { color: #445588; font-weight: bold; }
 .highlight .m { color: #009999; }
 .highlight .s { color: #dd1144; }
-.highlight .n { color: #333333; }
+/*.highlight .n { color: #333333; }*/
+.highlight .n { color: #abb2bf; }
 .highlight .na { color: teal; }
 .highlight .nb { color: #0086b3; }
 .highlight .nc { color: #445588; font-weight: bold; }
@@ -82,4 +83,4 @@
 .highlight .vi { color: teal; }
 .highlight .il { color: #009999; }
 .highlight .gc { color: #999; background-color: #EAF2F5; }
-*/
+
