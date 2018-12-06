@@ -177,7 +177,6 @@ tags:
 {
     //测试按钮事件响应   
 }
-
 ```
 
 #### 模型注释
@@ -194,7 +193,6 @@ tags:
 ///提货劵号
 @property (nonatomic, copy) NSString *credentialsCode;
 @end
-
 ```
 
 

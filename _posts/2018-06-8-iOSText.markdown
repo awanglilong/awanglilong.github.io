@@ -23,7 +23,6 @@ tags:
 2.XCTest中所有的测试用例的命名都是以test开头的
 
 ```objc
-
 #import <XCTest/XCTest.h>
 
 @interface StudentModeTests : XCTestCase
@@ -57,7 +56,6 @@ tags:
     }];
 }
 @end
-
 ```
 
 ## 三、断言
@@ -65,9 +63,7 @@ tags:
 最基本的断言，表示如果expression满足，则测试通过，否则对应format的错误。
 
 ```objc
-
 XCTAssert(expression, format...)
-
 ```
 
 ## 四、性能测试
@@ -76,14 +72,12 @@ XCTAssert(expression, format...)
 格式如下
 
 ```objc
-
 - (void)testPerformanceExample {
     // This is an example of a performance test case.
     [self measureBlock:^{
         // Put the code you want to measure the time of here.
     }];
 }
-
 ```
 
 性能测试的时候，如何判一个性能测试case是成功还是失败呢？
@@ -142,7 +136,6 @@ XCTAssert(expression, format...)
 （1）简单的例子，为类的方法设置固定返回
 
 ```objc
-
 //最简单的一个使用OCMock的例子
 - (void)testPersonNameEqual{
     
@@ -157,13 +150,11 @@ XCTAssert(expression, format...)
     //用这个预设的值和实际的值进行比较是否相等
     XCTAssertEqualObjects([mockClass getPersonName], [person getPersonName], @"值相等");
 }
-
 ```
 
 （2）模拟网络请求
 
 ```objc
-
 - (void)testDisplaysTweetsRetrievedFromConnection{
     
     TwitterViewController *controller = [[TwitterViewController alloc] init];
@@ -200,14 +191,11 @@ XCTAssert(expression, format...)
     testTweet3.userName = @"斗战胜佛";
     OCMVerify([mockView addTweet:testTweet3]);
 }
-
-
 ```
 
 （3）条件限定
 
 ```objc
-
 - (void)testStrictMock3{
     
     id classMock = OCMClassMock([TweetView class]);
@@ -221,7 +209,6 @@ XCTAssert(expression, format...)
 //    [classMock addTweet:testTweet];
     OCMVerifyAll(classMock);
 }
-
 ```
 
 ## 七、代码覆盖率
