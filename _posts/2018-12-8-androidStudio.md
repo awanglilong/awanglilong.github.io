@@ -16,23 +16,23 @@ tags:
 ## 二、启动Studio
 ### 跳过启动页
 在安装目录下的bin目录下的`idea.properties`文件里添加
-```
+```vim
 disable.android.first.run=true
 ```
 ### 在Studio里下载SDK
 只要下载最基本的就可以，这个过程会很慢。尽量选择急需的
-![](img/post-ubuntu-android/sdkplatforms.png)
-![](img/post-ubuntu-android/sdktool.png)
+![](/img/post-ubuntu-android/sdkplatforms.png)
+![](/img/post-ubuntu-android/sdktool.png)
 
 ## 三、配置gradle
 比较恶心的是gradle老是下载失败，所以选用本地的
-![](img/post-ubuntu-android/gradle.png)
+![](/img/post-ubuntu-android/gradle.png)
 
 ## 四、在虚拟机上运行
 ### 开启Intel虚拟机运行
 
 创建虚拟机后，运行时出现错误对话框，错误内容如下：
-```
+```vim
 KVM is required to run this AVD.
 /dev/kvm is not found.
 Enable VT-x in your BIOS security settings,
@@ -50,41 +50,40 @@ Enable VT-x in your BIOS security settings,
 ### 无法发现设备
 #### 1. 看usb连接列表
 使用命令
-```
+```shell
 lsusb
 ```
 如果是华为手机能直接看到如下样子的设备
-```
-lsusb
+```vim
 Bus 001 Device 006: ID 12d1:107e Huawei Technologies Co., Ltd.
 ```
 如果是小米的需要通过拔插数据线，对比usb列表
 
 #### 2. 编辑usb识别规则文件
 android.rules文件名字前缀随意
-```
+```shell
 sudo gedit /etc/udev/rules.d/70-android.rules
 ```
 #### 3. 添加语句
 指定usb可以识别
-```
+```vim
 SUBSYSTEM=="usb",ATTR{idVendor}=="12d1",ATTRS{idProduct}=="107e",MODE="0666"
 SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", MODE="0666"
 ```
 #### 4. 文件提权
-```
+```shell
 sudo chmod a+rx /etc/udev/rules.d/70-android.rules
 ```
 #### 5. 重启设备管理器
-```
+```shell
 sudo /etc/init.d/udev restart
 ```
 #### 6. 重启server
-```
+```shell
 sudo ./adb kill-server
 sudo ./adb start-server
 ```
 #### 7.看连接列表
-```
+```shell
 sudo ./adb devices
 ```
