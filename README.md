@@ -1,4 +1,4 @@
-写点博客，
+写点[博客](https://awanglilong.github.io/)，
 整理所思。
 
 ```
