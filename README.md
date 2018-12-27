@@ -10,11 +10,11 @@ jekyll serve
 ### 面向对象
 一、继承
 
-继承是面向对象语言的最重要的特性之一，应当掌握，并熟练使用。
+继承是面向对象语言的最重要的特性之一，应当掌握其特性，并熟练使用。
 
-虽然大多书和文章（[跳出面向对象思想(一) 继承](https://casatwy.com/tiao-chu-mian-xiang-dui-xiang-si-xiang-yi-ji-cheng.html)）里都反对使用继承，然而所有语言的框架都在使用继承。
+继承的层数不应当超过三层，随着继承的层数增加，代码的复杂度成几何倍增加（框架里的继承一般为三层左右）
 
-
+大多书和文章（[跳出面向对象思想(一) 继承](https://casatwy.com/tiao-chu-mian-xiang-dui-xiang-si-xiang-yi-ji-cheng.html)）里都反对使用继承。不过里面也介绍，一些情况下应当使用继承。
 
 ### iOS学习
 #### 一、MVC与MVVM
