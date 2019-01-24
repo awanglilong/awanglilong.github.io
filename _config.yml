@@ -94,8 +94,17 @@ friends: [
         title: "算法动画",
         href: "https://visualgo.net/en"
     },{
+        title: "数据结构",
+        href: "https://www.jianshu.com/p/230e6fde9c75"
+    },{
         title: "图标",
         href: "http://iconfont.cn/"
+    },{
+        title: "Flutter",
+        href: "https://flutterchina.club"
+    },{
+        title: "Spring",
+        href: "https://start.spring.io/"
     }
 ]
 
