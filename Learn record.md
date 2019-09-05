@@ -6,4 +6,4 @@
 
 2、学习框架 [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons) 
 
-          [iconfont使用](https://www.jianshu.com/p/332198bf46a7)
+ [iconfont使用](https://www.jianshu.com/p/332198bf46a7)
