@@ -22,3 +22,5 @@
 3、常用方法
 
 [RACSignal-concat与zipWith过程解析](https://chipengliu.github.io/2019/01/13/RACSignal-concat-zipWith/)
+
+[RAC常见用法(三)](https://www.jianshu.com/p/715b7235da1d)
