@@ -11,10 +11,11 @@
 
 ## 学习RAC
 ### RACSignal
-1、[iOS RAC - RACSignal](https://www.jianshu.com/p/35a28cf0a22f)
-   
-   学习了解RACSignal的信号量创建，监听与发送
-   
-2、[『状态』驱动的世界：ReactiveCocoa](https://github.com/draveness/analyze/blob/master/contents/ReactiveObjC/RACSignal.md)
+1、RACSignal的整体了解，和bing方法的原理
 
-   RACSignal的整体了解，和bing方法的原理
+[『状态』驱动的世界：ReactiveCocoa](https://github.com/draveness/analyze/blob/master/contents/ReactiveObjC/RACSignal.md)
+
+2、 学习了解RACSignal的信号量创建，监听与发送的调用流程
+
+[iOS RAC - RACSignal](https://www.jianshu.com/p/35a28cf0a22f)
+   
