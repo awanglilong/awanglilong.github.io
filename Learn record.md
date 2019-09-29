@@ -24,3 +24,12 @@
 [RACSignal-concat与zipWith过程解析](https://chipengliu.github.io/2019/01/13/RACSignal-concat-zipWith/)
 
 [RAC常见用法(三)](https://www.jianshu.com/p/715b7235da1d)
+
+### RACSequence
+
+1、用法了解
+
+[iOS RAC - 集合RACTuple、RACSequence](https://www.jianshu.com/p/a57060bf6158)
+
+2、原理
+[Pull-Driven 的数据流 RACSequence](https://github.com/draveness/analyze/blob/master/contents/ReactiveObjC/RACSequence.md)
