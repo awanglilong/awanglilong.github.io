@@ -19,3 +19,6 @@
  
 [iOS RAC - RACSignal](https://www.jianshu.com/p/35a28cf0a22f)
    
+3、常用方法
+
+[RACSignal-concat与zipWith过程解析](https://chipengliu.github.io/2019/01/13/RACSignal-concat-zipWith/)
