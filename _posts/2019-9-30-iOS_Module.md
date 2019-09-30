@@ -4,12 +4,22 @@ layout:     post
 title:      "iOS路由技术"
 subtitle:   " \"到底应该使用什么路由方案呢\""
 date:       2019-09-30 11:00:00
+
+---
+
+
+---
+layout:     post
+title:      "Vim配置"
+subtitle:   " \"用Vim学习C\""
+date:       2018-12-06 14:20:00
 author:     "wanglilong"
 header-img: "img/post-bg-2015.jpg"
 catalog: true
 tags:
-    - iOS 开发
+    - Linux
 ---
+
 
 # iOS路由技术
 
