@@ -1,3 +1,14 @@
+---
+layout:     post
+title:      "MVC、MVVM模式"
+subtitle:   " \"设计模式让开发更简单\""
+date:       2019-10-11 11:27:00
+author:     "wanglilong"
+header-img: "img/post-bg-2015.jpg"
+catalog: true
+tags:
+    - iOS 开发
+---
 # MVC、MVVM模式
 
 
