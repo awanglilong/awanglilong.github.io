@@ -15,7 +15,7 @@ tags:
 
 经典的MVC模式如下图：
 
-![](/Users/wanglilong3/Documents/MVC、MVVM和组件化/MVC架构.png)
+![](/img/post-mvc-mvvm/MVC、MVVM和组件化/MVC架构.png)
 
 
 
@@ -49,7 +49,7 @@ Model：数据模型
 
 这样事件少传一层，写起来太方便了，「大笑」
 
-<img src="/Users/wanglilong3/Documents/MVC、MVVM和组件化/MV架构.png" style="zoom:50%;" />
+<img src="/img/post-mvc-mvvm/MVC、MVVM和组件化/MV架构.png" style="zoom:50%;" />
 
 
 
@@ -172,7 +172,7 @@ Model：数据模型。处理数据，网络请求。
 
 
 
-<img src="/Users/wanglilong3/Documents/MVC、MVVM和组件化/MVP架构.png" style="zoom:50%;" />
+<img src="/img/post-mvc-mvvm/MVC、MVVM和组件化/MVP架构.png" style="zoom:50%;" />
 
 方法三、MVVM
 
@@ -194,7 +194,7 @@ ViewModel：处理数据（负责view的数据处理），网络请求。
 
 Model：数据模型。
 
-<img src="/Users/wanglilong3/Documents/MVC、MVVM和组件化/MVVM架构png.png" style="zoom:50%;" />
+<img src="/img/post-mvc-mvvm/MVC、MVVM和组件化/MVVM架构png.png" style="zoom:50%;" />
 
 ### 总结
 
