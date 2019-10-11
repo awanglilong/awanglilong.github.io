@@ -21,11 +21,11 @@ tags:
 
 ### 在苹果的设想里MVC
 
-View：是xib或者storyboard。负责整个页面上的view（button，lable）以及其布局。
+> View：是xib或者storyboard。负责整个页面上的view（button，lable）以及其布局。
 
-Controller：负责处理点击事件，view页面动态管理，处理数据，网络请求。业务逻辑。
+> Controller：负责处理点击事件，view页面动态管理，处理数据，网络请求。业务逻辑。
 
-Model：数据模型
+> Model：数据模型
 
 优点很明显：层级简单，分工明确，开发快捷，便于掌握。
 
@@ -41,9 +41,9 @@ Model：数据模型
 
 分层如下：
 
-Controller：负责处理点击事件，view页面动态管理。 负责整个页面上的view（button，lable）以及其布局。处理数据，网络请求。业务逻辑。
+> Controller：负责处理点击事件，view页面动态管理。 负责整个页面上的view（button，lable）以及其布局。处理数据，网络请求。业务逻辑。
 
-Model：数据模型
+> Model：数据模型
 
 
 
@@ -116,11 +116,11 @@ Model：数据模型
 
 
 
-View：纯代码UIView。负责整个页面上的view（button，lable）的设置以及其布局。
+> View：纯代码UIView。负责整个页面上的view（button，lable）的设置以及其布局。
 
-Controller：负责处理点击事件，view页面动态管理。处理数据，网络请求
+> Controller：负责处理点击事件，view页面动态管理。处理数据，网络请求
 
-Model：数据模型
+> Model：数据模型
 
 
 
@@ -134,11 +134,11 @@ Controller处理数据，网络请求。还要处理页面逻辑。Controller还
 
 
 
-View：纯代码UIView。负责整个页面上的view（button，lable）的设置以及其布局。
+> View：纯代码UIView。负责整个页面上的view（button，lable）的设置以及其布局。
 
-Controller：负责处理点击事件，view页面动态管理。业务逻辑。
+> Controller：负责处理点击事件，view页面动态管理。业务逻辑。
 
-Model：数据模型。处理数据，网络请求。
+> Model：数据模型。处理数据，网络请求。
 
 
 
@@ -158,13 +158,13 @@ Controller毕竟还负担着业务逻辑。还是抽出来好了。于是MVP横�
 
 
 
-View：纯代码UIView。负责整个页面上的view（button，lable）的设置以及其布局。
+> View：纯代码UIView。负责整个页面上的view（button，lable）的设置以及其布局。
 
-Controller：负责处理点击事件，view页面动态管理。
+> Controller：负责处理点击事件，view页面动态管理。
 
-Presenter：业务逻辑。
+> Presenter：业务逻辑。
 
-Model：数据模型。处理数据，网络请求。
+> Model：数据模型。处理数据，网络请求。
 
 
 
@@ -184,15 +184,15 @@ Presenter应该是和ViewModel合并来减少层级，还是保持拆分保持�
 
 
 
-View：纯代码UIView。负责整个页面上的view（button，lable）的设置以及其布局。
+> View：纯代码UIView。负责整个页面上的view（button，lable）的设置以及其布局。
 
-Controller：负责处理点击事件，view页面动态管理。
+> Controller：负责处理点击事件，view页面动态管理。
 
-Presenter：业务逻辑。
+> Presenter：业务逻辑。
 
-ViewModel：处理数据（负责view的数据处理），网络请求。
+> ViewModel：处理数据（负责view的数据处理），网络请求。
 
-Model：数据模型。
+> Model：数据模型。
 
 <img src="/img/post-mvc-mvvm/MVVM架构png.png" style="zoom:50%;" />
 
