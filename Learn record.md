@@ -33,3 +33,8 @@
 
 2、原理
 [Pull-Driven 的数据流 RACSequence](https://github.com/draveness/analyze/blob/master/contents/ReactiveObjC/RACSequence.md)
+
+## 学习swift底层原理
+[Swift 对象内存模型探究（一）](https://mp.weixin.qq.com/s/zIkB9KnAt1YPWGOOwyqY3Q)
+[swift之内存布局](https://www.jianshu.com/p/d341974404a7)
+[Swift Runtime - 类和对象](https://www.jianshu.com/p/6ae6754923b4)
