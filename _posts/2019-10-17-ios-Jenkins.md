@@ -21,7 +21,7 @@ tags:
 
 安装brew
 
-```
+```shell
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
@@ -29,7 +29,7 @@ tags:
 
 由于jenkins依赖于java8（之上），所以需要先安装java
 
-```
+```shell
 brew cask install java
 ```
 
@@ -37,7 +37,7 @@ brew cask install java
 
 然后使用brew安装jenkins
 
-```
+```shell
 brew install jenkins
 ```
 
@@ -47,7 +47,7 @@ brew install jenkins
 
 命令
 
-```
+```shell
 service jenkins start //启动
 service jenkins stop  //停止
 service jenkins restart //重启
@@ -69,7 +69,7 @@ service jenkins restart //重启
 
 另外一般会另外安装插件
 
-```
+```shell
 Keychains and Provisioning Profiles Management//方便管理打包证书
 Xcode integration//由于需要使用Xcode编译环境，因此必须要安装插件
 ```
@@ -88,7 +88,7 @@ Xcode integration//由于需要使用Xcode编译环境，因此必须要安装�
 
 组件化是使用pod进行管理的，所以需要用pod命令
 
-```
+```shell
 pod install
 ```
 
@@ -140,7 +140,7 @@ pod install
 
 1、从git服务器上拉下代码到指定的文件夹
 
-```
+```shell
 node {
     checkout([$class: 'GitSCM', branches: [[name: '*/dev']], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'RelativeTargetDirectory', relativeTargetDir: 'HelloBeijing/ios/HelloBeijing_iOS/']], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'ccb75a88-4fe2-44e7-846d-0fea1965cef4', url: 'http://git.jd.com/helloBJ/HelloBeijing_iOS.git']]])
 }
@@ -159,7 +159,7 @@ credentialsId：为用户名密码生成的（目前只知道代码生成器的�
 
 2、进行pod
 
-```
+```shell
 node {
     sh label: '', 
     script: '''
@@ -174,7 +174,7 @@ node {
 
 3、最后shell脚本打包并上传
 
-```\
+```shell
 node {
     sh label: '', script: '''
 cd /Users/wanglilong3/.jenkins/workspace/HelloBeijingAll/HelloBeijing/ios/HelloBeijing_iOS
