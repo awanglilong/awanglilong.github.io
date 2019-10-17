@@ -205,9 +205,71 @@ shell脚本写法请见[iOS自动打包](https://awanglilong.github.io/2018/06/2
 
 
 
-#### 代码判断
 
-判断Git是否有新的提交，如果有的话拉取代码构建，如果没有不构建。Jenkins需要安装插件Conditional BuildStep。
+
+## 六：参考
+
+1、[占坑！利用 JenKins 持续集成 iOS 项目时遇到的问题](https://juejin.im/entry/5b5e7bdb6fb9a04fcc44af91)
+
+
+
+2、[使用jenkins实现xcode自动打包](https://www.jianshu.com/p/3668979476ad)
+
+
+
+3、最终脚本
+
+```shell
+pipeline {
+    agent any
+
+    stages {
+        stage('checkout') {
+            steps {
+                checkout([$class: 'GitSCM', branches: [[name: '*/dev']], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'RelativeTargetDirectory', relativeTargetDir: 'HelloBeijing/ios/HelloBeijing_iOS/']], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'ccb75a88-4fe2-44e7-846d-0fea1965cef4', url: 'http://git.jd.com/helloBJ/HelloBeijing_iOS.git']]])
+                echo 'ios'
+
+                checkout([$class: 'GitSCM', branches: [[name: '*/dev']], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'RelativeTargetDirectory', relativeTargetDir: 'iCityAppSDK/ICFoundationSDK/']], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'ccb75a88-4fe2-44e7-846d-0fea1965cef4', url: 'http://git.jd.com/iCityAppSDK/ICFoundationSDK.git']]])
+                echo 'ICFoundationSDK'
+                
+                checkout([$class: 'GitSCM', branches: [[name: '*/dev']], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'RelativeTargetDirectory', relativeTargetDir: 'iCityAppSDK/ICNetworkingSDK']], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'ccb75a88-4fe2-44e7-846d-0fea1965cef4', url: 'http://git.jd.com/iCityAppSDK/ICNetworkingSDK.git']]])
+                echo 'ICNetworkingSDK'
+
+                checkout([$class: 'GitSCM', branches: [[name: '*/dev']], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'RelativeTargetDirectory', relativeTargetDir: 'iCityAppSDK/ICUIKit']], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'ccb75a88-4fe2-44e7-846d-0fea1965cef4', url: 'http://git.jd.com/iCityAppSDK/ICUIKit.git']]])
+                echo 'ICUIKit'
+            }
+        }
+        
+        stage('pod') {
+            steps {
+    		    sh label: '', 
+   		        script: '''
+			        cd /Users/wanglilong3/.jenkins/workspace/HelloBeijingAll/HelloBeijing/ios/HelloBeijing_iOS
+		        	pod install
+		        '''
+		        echo 'pod'
+            }
+        }
+        
+        stage('build') {
+            steps {
+              sh label: '', 
+   		        script: '''
+			        cd /Users/wanglilong3/.jenkins/workspace/HelloBeijingAll/HelloBeijing/ios/HelloBeijing_iOS
+		        	sh xcode_Jenkins.sh
+		        '''
+                echo 'build'
+            }
+        }
+    }
+}
+```
+
+
+
+4、代码判断
+
+判断Git是否有新的提交，如果有的话拉取代码构建，如果没有不构建。Jenkins需要安装插件Conditional BuildStep。但是在流水线中无法生效。
 
 ```shell
 #!/bin/bash
@@ -221,39 +283,8 @@ else
         exit -1
     else
         echo "GIT_COMMIT is not equals to GIT_PREVIOUS_SUCCESSFUL_COMMIT"
-        sh build_using_xctool.sh//这里是有代码更新的条件下需要执行的代码，我这里是跑一个脚本
         exit 0
     fi
 fi
 ```
 
-
-
-```shell
-
-#!/bin/bash
-if [ ! $GIT_PREVIOUS_SUCCESSFUL_COMMIT ];then
-    echo "GIT_PREVIOUS_SUCCESSFUL_COMMIT is not exists."
-    exit 0
-else
-    if [ $GIT_PREVIOUS_SUCCESSFUL_COMMIT == $GIT_COMMIT ];then
-        echo "GIT_COMMIT is equals to GIT_PREVIOUS_SUCCESSFUL_COMMIT,skip build."
-        exit -1
-    else
-        echo "GIT_COMMIT is not equals to GIT_PREVIOUS_SUCCESSFUL_COMMIT"
-        sh build_using_xctool.sh//这里是有代码更新的条件下需要执行的代码，我这里是跑一个脚本
-        exit 0
-    fi
-fi
-
-```
-
-
-
-## 六：参考
-
-1、[占坑！利用 JenKins 持续集成 iOS 项目时遇到的问题](https://juejin.im/entry/5b5e7bdb6fb9a04fcc44af91)
-
-
-
-2、[使用jenkins实现xcode自动打包](https://www.jianshu.com/p/3668979476ad)
