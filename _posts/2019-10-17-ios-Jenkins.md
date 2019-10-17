@@ -163,8 +163,8 @@ credentialsId：为用户名密码生成的（目前只知道代码生成器的�
 node {
     sh label: '', 
     script: '''
-				cd /Users/用户名/.jenkins/workspace/HelloBeijingAll/HelloBeijing/ios/HelloBeijing_iOS
-				pod install
+cd /Users/用户名/.jenkins/workspace/HelloBeijingAll/HelloBeijing/ios/HelloBeijing_iOS
+pod install
 		'''
 }
 
