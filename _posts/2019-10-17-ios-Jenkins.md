@@ -205,6 +205,31 @@ shell脚本写法请见[iOS自动打包](https://awanglilong.github.io/2018/06/2
 
 
 
+4、判断git上代码是否有更新
+
+根据**全局变量参考**上说明，可根据currentBuild的changeSets，来判断git是否有更新。
+
+```
+currentBuild
+
+changeSets
+a list of changesets coming from distinct SCM checkouts; each has a kind and is a list of commits; each commit has a commitId, timestamp, msg, author, and affectedFiles each of which has an editType and path; the value will not generally be Serializable so you may only access it inside a method marked @NonCPS
+```
+
+代码如下
+
+```
+node {
+     stage('build') {
+          if (currentBuild.changeSets.isEmpty()) {
+                echo 'no change'
+          } else {
+                echo 'build'
+          }      
+      }
+}
+```
+
 
 
 ## 六：参考
@@ -250,19 +275,23 @@ pipeline {
 		        echo 'pod'
             }
         }
-        
-        stage('build') {
-            steps {
-              sh label: '', 
-   		        script: '''
-			        cd /Users/wanglilong3/.jenkins/workspace/HelloBeijingAll/HelloBeijing/ios/HelloBeijing_iOS
-		        	sh xcode_Jenkins.sh
-		        '''
-                echo 'build'
-            }
-        }
     }
 }
+node {
+     stage('build') {
+          if (currentBuild.changeSets.isEmpty()) {
+                echo 'no change'
+          } else {
+                sh label: '', 
+   		        	script: '''
+			        	cd /Users/wanglilong3/.jenkins/workspace/HelloBeijingAll/HelloBeijing/ios/HelloBeijing_iOS
+		        		sh xcode_Jenkins.sh
+		        		'''
+                echo 'build'
+          }      
+      }
+}
+
 ```
 
 
