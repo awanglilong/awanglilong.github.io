@@ -1,3 +1,14 @@
+---
+layout:     post
+title:      "iOS自动化部署Jenkins"
+subtitle:   " \"自动化部署\""
+date:       2019-10-17 10:13:00
+author:     "wanglilong"
+header-img: "img/post-bg-2015.jpg"
+catalog: true
+tags:
+- iOS 开发
+---
 # iOS自动化部署Jenkins
 
 ## 一、前言
@@ -83,13 +94,13 @@ pod install
 
 如果没有配置环境变量会提示 pod: command not found。所以需要配置环境变量
 
-<img src="/Users/wanglilong3/Documents/iOS自动化部署Jenkins/环境配置1.jpg" alt="环境配置1" style="zoom:50%;" />
+<img src="/img/post-ios-Jenkins/环境配置1.jpg" alt="环境配置1" style="zoom:50%;" />
 
 
 
 然后选择Environment variables。其中，PATH是固定的，值是在终端输入:`$echo $PATH`命令获取，将输入命令后得到的值粘贴过来就可以了。
 
-<img src="/Users/wanglilong3/Documents/iOS自动化部署Jenkins/环境配置2.png" style="zoom:50%;" />
+<img src="/img/post-ios-Jenkins/环境配置2.png" style="zoom:50%;" />
 
 ### (2)、配置Keychains and Provisioning Profiles Management
 
@@ -99,17 +110,17 @@ pod install
 
 ##### 首先、创建流水线项目
 
-<img src="/Users/wanglilong3/Documents/iOS自动化部署Jenkins/流水线1.png" style="zoom:50%;" />
+<img src="/img/post-ios-Jenkins/流水线1.png" style="zoom:50%;" />
 
 
 
 ##### 设置执行脚本的时间
 
-<img src="/Users/wanglilong3/Documents/iOS自动化部署Jenkins/流水线2.png" alt="流水线2" style="zoom:50%;" />
+<img src="/img/post-ios-Jenkins/流水线2.png" alt="流水线2" style="zoom:50%;" />
 
 ##### 设置脚本
 
-<img src="/Users/wanglilong3/Documents/iOS自动化部署Jenkins/流水线3.png" style="zoom:50%;" />
+<img src="/img/post-ios-Jenkins/流水线3.png" style="zoom:50%;" />
 
 ##### 脚本语法
 
