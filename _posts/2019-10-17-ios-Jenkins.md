@@ -30,7 +30,7 @@ tags:
 由于jenkins依赖于java8（之上），所以需要先安装java
 
 ```shell
-brew cask install java
+brew cask install homebrew/cask-versions/adoptopenjdk8
 ```
 
 
@@ -108,27 +108,27 @@ pod install
 
 ###(3)、流水线
 
-##### 首先、创建流水线项目
+#### 首先、创建流水线项目
 
 <img src="/img/post-ios-Jenkins/流水线1.png" style="zoom:50%;" />
 
 
 
-##### 设置执行脚本的时间
+#### 设置执行脚本的时间
 
 <img src="/img/post-ios-Jenkins/流水线2.png" alt="流水线2" style="zoom:50%;" />
 
-##### 设置脚本
+#### 设置脚本
 
 <img src="/img/post-ios-Jenkins/流水线3.png" style="zoom:50%;" />
 
-##### 脚本语法
+#### 脚本语法
 
 点击上图中的[Pipeline Syntax](http://localhost:8080/job/Hello/pipeline-syntax),可以通过生成器生成脚本
 
 
 
-##### 组件化项目打包方式
+#### 组件化项目打包方式
 
 >首先：拉下来iOS各个模块的代码
 >
@@ -204,6 +204,49 @@ curl -F  file=@${IPA_PATH}  -F  _api_key=${apiKey}  https://www.pgyer.com/apiv2/
 shell脚本写法请见[iOS自动打包](https://awanglilong.github.io/2018/06/26/iOSAutomaticPackaging/)
 
 
+
+#### 代码判断
+
+判断Git是否有新的提交，如果有的话拉取代码构建，如果没有不构建。Jenkins需要安装插件Conditional BuildStep。
+
+```shell
+#!/bin/bash
+if [ ! $GIT_PREVIOUS_SUCCESSFUL_COMMIT ];then
+    echo "GIT_PREVIOUS_SUCCESSFUL_COMMIT is not exists."
+    exit 0
+else
+    echo "GIT_COMMIT=[$GIT_COMMIT],GIT_PREVIOUS_SUCCESSFUL_COMMIT=[$GIT_PREVIOUS_SUCCESSFUL_COMMIT]"
+    if [ $GIT_PREVIOUS_SUCCESSFUL_COMMIT == $GIT_COMMIT ];then
+        echo "GIT_COMMIT is equals to GIT_PREVIOUS_SUCCESSFUL_COMMIT,skip build."
+        exit -1
+    else
+        echo "GIT_COMMIT is not equals to GIT_PREVIOUS_SUCCESSFUL_COMMIT"
+        sh build_using_xctool.sh//这里是有代码更新的条件下需要执行的代码，我这里是跑一个脚本
+        exit 0
+    fi
+fi
+```
+
+
+
+```shell
+
+#!/bin/bash
+if [ ! $GIT_PREVIOUS_SUCCESSFUL_COMMIT ];then
+    echo "GIT_PREVIOUS_SUCCESSFUL_COMMIT is not exists."
+    exit 0
+else
+    if [ $GIT_PREVIOUS_SUCCESSFUL_COMMIT == $GIT_COMMIT ];then
+        echo "GIT_COMMIT is equals to GIT_PREVIOUS_SUCCESSFUL_COMMIT,skip build."
+        exit -1
+    else
+        echo "GIT_COMMIT is not equals to GIT_PREVIOUS_SUCCESSFUL_COMMIT"
+        sh build_using_xctool.sh//这里是有代码更新的条件下需要执行的代码，我这里是跑一个脚本
+        exit 0
+    fi
+fi
+
+```
 
 
 
