@@ -22,6 +22,7 @@ iOS架构师写的 [iOS应用架构谈](https://casatwy.com/iosying-yong-jia-gou
 
 
 ## 学习RN
+
 1、学习弹性布局Flex: [Flex 布局教程：语法篇](http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html)
 
 2、学习框架 [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons) 
@@ -30,7 +31,8 @@ iOS架构师写的 [iOS应用架构谈](https://casatwy.com/iosying-yong-jia-gou
 
 
 ## 学习RAC
-### RACSignal
+
+RACSignal
 1、RACSignal的整体了解，和bing方法的原理，Disposable的原理
 
 [『状态』驱动的世界：ReactiveCocoa](https://github.com/draveness/analyze/blob/master/contents/ReactiveObjC/RACSignal.md)
@@ -45,7 +47,7 @@ iOS架构师写的 [iOS应用架构谈](https://casatwy.com/iosying-yong-jia-gou
 
 [RAC常见用法(三)](https://www.jianshu.com/p/715b7235da1d)
 
-### RACSequence
+RACSequence
 
 1、用法了解
 
@@ -54,7 +56,8 @@ iOS架构师写的 [iOS应用架构谈](https://casatwy.com/iosying-yong-jia-gou
 2、原理
 [Pull-Driven 的数据流 RACSequence](https://github.com/draveness/analyze/blob/master/contents/ReactiveObjC/RACSequence.md)
 
-## 学习swift底层原理
+
+## swift
 
 [Swift 对象内存模型探究（一）](https://mp.weixin.qq.com/s/zIkB9KnAt1YPWGOOwyqY3Q)
 
