@@ -33,19 +33,22 @@ iOS架构师写的 [iOS应用架构谈](https://casatwy.com/iosying-yong-jia-gou
 ## 学习RAC
 
 #### RACSignal
-1、RACSignal的整体了解
+RACSignal的整体了解
 
 [『状态』驱动的世界：ReactiveCocoa](https://github.com/draveness/analyze/blob/master/contents/ReactiveObjC/RACSignal.md)
 
-2、 学习了解RACSignal的信号量创建、监听与发送的调用流程
- 
 [iOS RAC - RACSignal](https://www.jianshu.com/p/35a28cf0a22f)
-   
-3、常用方法
 
 [RACSignal-concat与zipWith过程解析](https://chipengliu.github.io/2019/01/13/RACSignal-concat-zipWith/)
 
 [RAC常见用法(三)](https://www.jianshu.com/p/715b7235da1d)
+
+#### RACSubject
+
+>使用其实现一个责任链
+
+[『可变』的热信号 RACSubject](https://github.com/draveness/analyze/blob/master/contents/ReactiveObjC/RACSubject.md)
+
 
 RACSequence
 
@@ -57,11 +60,6 @@ RACSequence
 [Pull-Driven 的数据流 RACSequence](https://github.com/draveness/analyze/blob/master/contents/ReactiveObjC/RACSequence.md)
 
 
-#### RACSubject
-
->使用其实现一个责任链
-
-[『可变』的热信号 RACSubject](https://github.com/draveness/analyze/blob/master/contents/ReactiveObjC/RACSubject.md)
 
 
 ## swift
