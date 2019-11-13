@@ -57,6 +57,11 @@ RACSequence
 [Pull-Driven 的数据流 RACSequence](https://github.com/draveness/analyze/blob/master/contents/ReactiveObjC/RACSequence.md)
 
 
+RACSubject(使用其实现一个责任链)
+
+[『可变』的热信号 RACSubject](https://github.com/draveness/analyze/blob/master/contents/ReactiveObjC/RACSubject.md)
+
+
 ## swift
 
 [Swift 对象内存模型探究（一）](https://mp.weixin.qq.com/s/zIkB9KnAt1YPWGOOwyqY3Q)
