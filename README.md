@@ -32,8 +32,8 @@ iOS架构师写的 [iOS应用架构谈](https://casatwy.com/iosying-yong-jia-gou
 
 ## 学习RAC
 
-RACSignal
-1、RACSignal的整体了解，和bing方法的原理，Disposable的原理
+#### RACSignal
+1、RACSignal的整体了解
 
 [『状态』驱动的世界：ReactiveCocoa](https://github.com/draveness/analyze/blob/master/contents/ReactiveObjC/RACSignal.md)
 
