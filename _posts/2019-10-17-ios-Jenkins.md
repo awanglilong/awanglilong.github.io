@@ -48,11 +48,8 @@ brew install jenkins
 命令
 
 ```shell
-service jenkins start //启动
-service jenkins stop  //停止
-service jenkins restart //重启
+jenkins//启动
 ```
-
 
 
 登录网址管理Jenkins
@@ -106,7 +103,7 @@ pod install
 
 见（参考2）用流水方式打包好像并没有用
 
-###(3)、流水线
+### (3)、流水线
 
 #### 首先、创建流水线项目
 
@@ -317,3 +314,4 @@ else
 fi
 ```
 
+4、[手把手教你利用 Jenkins 持续集成 iOS 项目](https://halfrost.com/ios_jenkins/)
