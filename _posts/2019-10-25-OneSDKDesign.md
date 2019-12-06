@@ -74,7 +74,7 @@ DDLogFormatter的类簇，是管理输出格式的。有多线程，黑白名单
 
 2、使其在对顶端view上弹出。
 
-```objective-c
+```objc
 + (UIView *)getView
 {
     UIWindow *topView = [UIApplication sharedApplication].keyWindow;
@@ -99,7 +99,7 @@ DDLogFormatter的类簇，是管理输出格式的。有多线程，黑白名单
 
 仅仅对http头部信息进行简单封装。另外其包含一个MD5加密的简单工具类。
 
-```objective-c
+```objc
 +(NSMutableURLRequest *)makeURLRequest:(NSString *)urlString secretKey:(NSString *)secretKey appCode:(NSString*) appCode modelCode:(NSString *)modelCode{
     NSString *packageName = [NSString stringWithFormat:@"%@%@",[JDCNetwork getBundleID],secretKey];
     NSString *packageNameMD5 = [packageName md5HashToLower32Bit];
@@ -120,7 +120,7 @@ DDLogFormatter的类簇，是管理输出格式的。有多线程，黑白名单
 
 
 
-```objective-c
+```objc
 +(void)requestAuthWithSecretKey:(NSString *)secretKey
                         appCode:(NSString*) appCode
                       modelCode:(NSString *)modelCode
@@ -145,7 +145,7 @@ DDLogFormatter的类簇，是管理输出格式的。有多线程，黑白名单
 
 在JDCURLJumpManager类中对其进行隔离，对外只暴露方法
 
-```objective-c
+```objc
 /**
  普通跳转
  
@@ -160,7 +160,7 @@ Webview的类使用了，洪亮的BaseViewController和BaseWKWebViewController�
 
 我主要对其进行重命名，并继承后使用。
 
-```objective-c
+```objc
 #pragma mark - ICUBaseVCProtocol
 - (BOOL)icu_baseVCNavigationBarHidden {
     return NO;
@@ -197,7 +197,7 @@ Webview的类使用了，洪亮的BaseViewController和BaseWKWebViewController�
 
 包内图片获取使用了一个小工具
 
-```objective-c
+```objc
 + (UIImage *)jdc_imageNamed:(NSString *)name {
     NSBundle *bundle = [self pickerBundle];
     JDCLogInfo(@"bundle %@",bundle);
@@ -230,7 +230,7 @@ Webview的类使用了，洪亮的BaseViewController和BaseWKWebViewController�
 
 为了不暴露实际实现，我们只暴露了协议JDCAuthProtocol。实际的方法调用，通过JDCAuth类代理给JDCAuthManager。代理通过消息发送机制的消息转发实现。
 
-```objective-c
+```objc
 + (id)forwardingTargetForSelector:(SEL)aSelector
 {
     return [NSClassFromString(@"JDCAuthManager") class];
@@ -255,7 +255,7 @@ Webview的类使用了，洪亮的BaseViewController和BaseWKWebViewController�
 
 4、每次启动App可能需要不同的modelCode，所以启动模块时同时设置modelCode。
 
-```objective-c
+```objc
 
 @protocol JDCAuthProtocol <NSObject>
 
@@ -313,7 +313,7 @@ Webview的类使用了，洪亮的BaseViewController和BaseWKWebViewController�
 
 错误返回通过block进行抛出。但是由于京东SDK的错误分为两类，一种是只有NSError，一种是errorMessage+replyCode。所以返回为NSError、errorMessage和replyCode。
 
-```objective-c
+```objc
 /**
  成功block
  @param tokenString token字符串
@@ -336,7 +336,7 @@ typedef void (^JDCAuthFailedBlock) (NSString  * __nullable errorMessage,NSUInteg
 
 另外还包含一些自己的错误，所以添加`JDCAuthErrorType errorType`进行区分。
 
-```objective-c
+```objc
 typedef enum JDCAuthErrorType {
     JDCAuthErrorNullData = 100001,                         // 有空数据
     JDCAuthErrorGetURLFailed = 100002,                     // 获取连接失败
@@ -370,7 +370,7 @@ typedef enum JDCAuthErrorType {
 
 同时通过👇方法来添加block，获取返回。
 
-```objective-c
+```objc
 /**
  成功和失败的返回
  
@@ -395,7 +395,7 @@ typedef enum JDCAuthErrorType {
 
 如果未安装则走降级策略，拼出新的URL在App浏览器中直接打开。
 
-```objective-c
+```objc
 - (void)jdUnionLogin
 {
     if (self.isJDAppInstall) {
@@ -428,7 +428,7 @@ typedef enum JDCAuthErrorType {
 
 （1）在分类JDCAuthManager+authorizeProtocol中处理登录验证回调。
 
-```objective-c
+```objc
 /**
  * @brief  登录验证回调协议。
  */
@@ -440,7 +440,7 @@ typedef enum JDCAuthErrorType {
 
 （2）在分类JDCAuthManager+jumpTokenProtocol.h中处理H5跳转回调。
 
-```objective-c
+```objc
 /**
  * @brief  APP 跳转 H5 回调协议。
  */
@@ -449,7 +449,7 @@ typedef enum JDCAuthErrorType {
 
 
 
-```objective-c
+```objc
 /*
 * @brief h5跳回app。
  *
@@ -461,7 +461,7 @@ typedef enum JDCAuthErrorType {
 
 （3）在分类JDCAuthManager+verificationProtocol.h中处理token验证和签名接口回调。
 
-```objective-c
+```objc
 /**************************
  jd 第三方授权登录业务、验证第三方token接口
  **************************/
@@ -470,7 +470,7 @@ typedef enum JDCAuthErrorType {
 
 
 
-```objective-c
+```objc
 /**************************
  jd 第三方授权登录业务、 验证第三方签名接口
  **************************/
@@ -487,7 +487,7 @@ typedef enum JDCAuthErrorType {
 
 问题：用户还是需要实现`application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options`方法才生效。
 
-```objective-c
+```objc
 @implementation JDCAuthManager (AppDelegate)
 + (void)load
 {
