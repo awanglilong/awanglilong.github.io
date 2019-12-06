@@ -41,7 +41,7 @@ DDLogFormatter的类簇，是管理输出格式的。有多线程，黑白名单
 
 自定义JDCNormalLogFormatter如下。
 
-```objective-c
+```objc
 - (NSString *)formatLogMessage:(JDCLogMessage *)logMessage{
     NSString *functionName = [NSString stringWithCString:logMessage.function.UTF8String encoding:NSASCIIStringEncoding];
     
