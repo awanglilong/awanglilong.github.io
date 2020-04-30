@@ -31,13 +31,10 @@ vim 被誉为上古神器，可以看得出 vim 在编辑器的地位是很高�
 ```shell
 sudo apt-get install vim
 ```
-### Atom
-`Atom` 是`github`专门为程序员推出的一个跨平台文本编辑器。软件简洁，代码显示效果漂亮，但是和`chrome`一样超级吃内存。可以编写md文件。
-
-[Atom官方](https://atom.io/)上下载，直接双击安装。
 ### Typora
 `Typora`是一款轻便简洁的`Markdown`编辑器，支持即时渲染技术，这也是与其它`Markdown`编辑器最显著的区别。即时渲染使得你写Markdown就想是写Word文档一样流畅自如，不像其他编辑器的有编辑栏和显示栏。
 不过更喜欢用Atom写md。
+
 ``` shell
 wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -
 sudo add-apt-repository 'deb https://typora.io/linux ./'
@@ -50,3 +47,15 @@ sudo apt-get install typora
 ``` shell
 sudo apt-get install git
 ```
+
+
+
+## 五、搭建服务器
+
+私有云[Nextcloud](https://nextcloud.com/)
+
+下载：[Aria2](https://github.com/aria2/aria2) 
+
+HTPC播放：[KODI](https://kodi.tv/)。
+
+视频服务器：[Jellyfin](https://github.com/jellyfin/jellyfin)
