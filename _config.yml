@@ -91,6 +91,9 @@ service-worker: true
 # Friends
 friends: [
     {
+        title: "小松的技术博客",
+        href: "http://blog.cgsdream.org/"
+    },{
         title: "算法动画",
         href: "https://visualgo.net/en"
     },{
