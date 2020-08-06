@@ -3,8 +3,8 @@ title: longlong Blog
 SEOTitle: 龙龙的博客 | longlong Blog
 header-img: img/home-bg.jpg
 email: 571275935@qq.com
-description: "关于前端与设计、黑客与画家 | 黄玄，Web & Mobile Lover，Software Engineer，UX Designer | 这里是 @Hux黄玄 的个人博客，与你一起发现更大的世界。"
-keyword: "黄玄, Hux黄玄, Hux, 鬼栈, huxpro, @huxpro, 黄玄的博客, Hux Blog, 博客, 个人网站, 互联网, Web, JavaScript, 前端, 设计"
+description: "关于前端与iOS | 黄玄，Web & Mobile Lover，Software Engineer | 这里是 longlong 的个人博客，与你一起发现更大的世界。"
+keyword: "longlong , longlong的博客, Hux Blog, 博客, 个人网站, iOS, Web, JavaScript, 前端"
 url: "https://awanglilong.github.io/"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
@@ -52,10 +52,10 @@ kramdown:
 
 
 # Disqus settings
-disqus_username: hux
+disqus_username: longlong
 
 # Netease settings
-netease_comment: false
+netease_comment: ture
 
 
 
