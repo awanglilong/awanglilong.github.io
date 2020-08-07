@@ -14,7 +14,7 @@ tags:
 
 项目总的架构图大体如下，但是组件分层并没有固定标准，图片是下面描述有不一致地方，但大体如此。
 
-<img src="../img/post-component/iOS-component.png" style="zoom:70%;" />
+<img src="/img/post-component/iOS-component.png" style="zoom:70%;" />
 
 
 
@@ -259,4 +259,5 @@ app启动隐私和权限弹窗
 
 客户端的架构与服务端越来越接近。
 
-![web-component](../img/post-component/web-component.jpg)
+![web-component](/img/post-component/web-component.jpg)
+
