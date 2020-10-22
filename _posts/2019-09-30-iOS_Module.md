@@ -110,6 +110,8 @@ Target（class）+Action（function）实现服务注册
 
 根据设置类名称和方法名称调用performTarget（runtime）实现服务发现
 
+我们最后的路由实现为了方便管理添加了协议。
+
 
 ### 总结
 
