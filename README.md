@@ -18,13 +18,17 @@
 
 [freecodecamp](https://learn.freecodecamp.org/)上完成题目熟悉前端代码
 
-**[阿里的中后台UI组件库](https://github.com/ant-design/ant-design)源码、[Taro-UI](https://github.com/NervJS/taro-ui)源码、[iview](https://github.com/iview/iview) **UI组件学习
+[阿里的中后台UI组件库](https://github.com/ant-design/ant-design)源码、[Taro-UI](https://github.com/NervJS/taro-ui)源码、[iview](https://github.com/iview/iview) UI组件学习
+
+[冴羽的博客](https://github.com/mqyqingfeng/Blog)
 
 
 
 ## 算法
 
 [fucking-algorithm](https://github.com/labuladong/fucking-algorithm)  提出算法结题框架
+
+[五分钟学算法](https://www.cxyxiaowu.com/) 算法动画做的最好的
 
 
 
@@ -40,6 +44,7 @@
 
 [跳出面向对象思想(一) 继承](https://casatwy.com/tiao-chu-mian-xiang-dui-xiang-si-xiang-yi-ji-cheng.html)  但是一些基本体系的继承都在使用
 
+[刘望舒的博客](http://liuwangshu.cn/)
 
 ### swift
 
@@ -53,7 +58,7 @@
 
 
 
-# 职业规划
+## 职业规划
 
 [一个程序员的成长之路](https://github.com/awanglilong/awanglilong.github.io/issues/1)
 
@@ -67,5 +72,19 @@
 
 [MacTalk](http://macshuo.com)
 
+[游戏开发随笔](https://zhuanlan.zhihu.com/gu-yu)
 
+
+
+## 技术团队
+
+[美团技术团队](https://tech.meituan.com/)
+
+
+
+## UI与产品论坛
+
+[优设](https://www.uisdc.com/)     [zool](https://www.zcool.com.cn/)    [花瓣](https://huaban.com/) 
+
+[产品](http://www.woshipm.com/)      [pmcaff](https://www.pmcaff.com/)  [纯银V](https://www.jianshu.com/u/c22ccc510fb9)
 
