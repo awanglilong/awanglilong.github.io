@@ -46,6 +46,8 @@
 
 [刘望舒的博客](http://liuwangshu.cn/)
 
+[iOS卡顿问题处理](https://blog.ibireme.com/2015/11/12/smooth_user_interfaces_for_ios/)
+
 ### swift
 
 [Swift 对象内存模型探究（一）](https://mp.weixin.qq.com/s/zIkB9KnAt1YPWGOOwyqY3Q)
