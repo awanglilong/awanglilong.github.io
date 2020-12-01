@@ -48,6 +48,9 @@
 
 [iOS卡顿问题处理](https://blog.ibireme.com/2015/11/12/smooth_user_interfaces_for_ios/)
 
+[APP性能检测方案汇总](https://www.jianshu.com/p/95df83780c8f)
+
+
 ### swift
 
 [Swift 对象内存模型探究（一）](https://mp.weixin.qq.com/s/zIkB9KnAt1YPWGOOwyqY3Q)
