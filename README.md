@@ -63,7 +63,7 @@
 
 ## 设计模式
 
-[Head First设计模式]()是入门设计模式非常不错的书籍
+《Head First设计模式》是入门设计模式非常不错的书籍
 
 [设计模式](https://design-patterns.readthedocs.io/zh_CN/latest/) 一个成体系的设计模式课程(可以当字典查询)
 
