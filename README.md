@@ -61,7 +61,13 @@
 
 [从源码解析 Swift 弱引用](https://zhuanlan.zhihu.com/p/58179258)
 
+## 设计模式
 
+[Head First设计模式]()是入门设计模式非常不错的书籍
+
+[设计模式](https://design-patterns.readthedocs.io/zh_CN/latest/) 一个成体系的设计模式课程(可以当字典查询)
+
+[LZ](https://www.cnblogs.com/zuoxiaolong/category/509144.html) 一个博主的设计模式笔记,内容有一定启迪性
 
 ## 职业规划
 
