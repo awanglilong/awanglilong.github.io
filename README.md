@@ -46,6 +46,11 @@
 
 [刘望舒的博客](http://liuwangshu.cn/)
 
+[iOS卡顿问题处理](https://blog.ibireme.com/2015/11/12/smooth_user_interfaces_for_ios/)
+
+[APP性能检测方案汇总](https://www.jianshu.com/p/95df83780c8f)
+
+
 ### swift
 
 [Swift 对象内存模型探究（一）](https://mp.weixin.qq.com/s/zIkB9KnAt1YPWGOOwyqY3Q)
@@ -56,7 +61,13 @@
 
 [从源码解析 Swift 弱引用](https://zhuanlan.zhihu.com/p/58179258)
 
+## 设计模式
 
+看的《Head First设计模式》入门
+
+[设计模式](https://design-patterns.readthedocs.io/zh_CN/latest/) 一个成体系的设计模式课程(可以当字典查询)
+
+[LZ](https://www.cnblogs.com/zuoxiaolong/category/509144.html) 一个博主的设计模式笔记,内容有一定启迪性
 
 ## 职业规划
 
