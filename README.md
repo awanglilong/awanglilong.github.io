@@ -65,9 +65,8 @@
 
 看的《Head First设计模式》入门
 
-[设计模式](https://design-patterns.readthedocs.io/zh_CN/latest/) 一个成体系的设计模式课程(可以当字典查询)
+[设计模式](https://design-patterns.readthedocs.io/zh_CN/latest/) 一个成体系的设计模式课程,其中时序图对理解设计模式很有帮助
 
-[LZ](https://www.cnblogs.com/zuoxiaolong/category/509144.html) 一个博主的设计模式笔记,内容有一定启迪性
 
 ## 职业规划
 
