@@ -63,7 +63,7 @@
 
 ## 设计模式
 
-[设计模式](https://design-patterns.readthedocs.io/zh_CN/latest/) 时序图对理解设计模式非常有帮助
+[图说设计模式](https://design-patterns.readthedocs.io/zh_CN/latest/) 时序图对理解设计模式非常有帮助
 
 
 ## 职业规划
