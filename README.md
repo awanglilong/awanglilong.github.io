@@ -63,9 +63,7 @@
 
 ## 设计模式
 
-看的《Head First设计模式》入门
-
-[设计模式](https://design-patterns.readthedocs.io/zh_CN/latest/) 一个成体系的设计模式课程,其中时序图对理解设计模式很有帮助
+[设计模式](https://design-patterns.readthedocs.io/zh_CN/latest/) 时序图对理解设计模式非常有帮助
 
 
 ## 职业规划
