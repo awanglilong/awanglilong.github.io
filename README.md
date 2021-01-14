@@ -1,5 +1,11 @@
 [我的博客](https://awanglilong.github.io/)
 
+## 算法
+
+[fucking-algorithm](https://github.com/labuladong/fucking-algorithm)  提出算法结题框架
+
+[五分钟学算法](https://www.cxyxiaowu.com/) 算法动画做的最好的
+
 ## web开发
 
 [纯洁的微笑](http://www.ityouknow.com/)  精通微服务架构
@@ -21,15 +27,6 @@
 [阿里的中后台UI组件库](https://github.com/ant-design/ant-design)源码、[Taro-UI](https://github.com/NervJS/taro-ui)源码、[iview](https://github.com/iview/iview) UI组件学习
 
 [冴羽的博客](https://github.com/mqyqingfeng/Blog)
-
-
-
-## 算法
-
-[fucking-algorithm](https://github.com/labuladong/fucking-algorithm)  提出算法结题框架
-
-[五分钟学算法](https://www.cxyxiaowu.com/) 算法动画做的最好的
-
 
 
 ## 移动端开发
