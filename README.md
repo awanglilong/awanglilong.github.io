@@ -64,13 +64,6 @@
 [advanced-java](https://github.com/doocs/advanced-java) 分布式，高并发，微服务讲解最清晰的
 
 
-## 职业规划
-
-[一个程序员的成长之路](https://github.com/awanglilong/awanglilong.github.io/issues/1)
-
-[大公司](https://github.com/awanglilong/awanglilong.github.io/issues/3)
-
-
 ## 知名博客
 
 [冰霜之地](https://halfrost.com/)
