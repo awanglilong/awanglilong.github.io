@@ -6,28 +6,13 @@
 
 [五分钟学算法](https://www.cxyxiaowu.com/) 算法动画做的最好的
 
-## web开发
+## 设计模式
 
-[纯洁的微笑](http://www.ityouknow.com/)  精通微服务架构
+[图说设计模式](https://design-patterns.readthedocs.io/zh_CN/latest/) 时序图对理解设计模式非常有帮助
 
-[mall](https://github.com/macrozheng/mall) 微服务架构电商系统
+## 计算机网络
 
-[advanced-java](https://github.com/doocs/advanced-java) 分布式，高并发，微服务讲解最清晰的
-
-
-
-## 前端开发
-
-[千古壹号](https://github.com/qianguyihao/Web) 最好的前端入门教程，最主要是成体系
-
-[Flex 布局教程：语法篇](http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html) 弹性布局讲的最好的
-
-[freecodecamp](https://learn.freecodecamp.org/)上完成题目熟悉前端代码
-
-[阿里的中后台UI组件库](https://github.com/ant-design/ant-design)源码、[Taro-UI](https://github.com/NervJS/taro-ui)源码、[iview](https://github.com/iview/iview) UI组件学习
-
-[冴羽的博客](https://github.com/mqyqingfeng/Blog)
-
+[TCP协议详解](https://github.com/awanglilong/awanglilong.github.io/issues/15)
 
 ## 移动端开发
 
@@ -58,9 +43,25 @@
 
 [从源码解析 Swift 弱引用](https://zhuanlan.zhihu.com/p/58179258)
 
-## 设计模式
 
-[图说设计模式](https://design-patterns.readthedocs.io/zh_CN/latest/) 时序图对理解设计模式非常有帮助
+## 前端开发
+
+[千古壹号](https://github.com/qianguyihao/Web) 最好的前端入门教程，最主要是成体系
+
+[Flex 布局教程：语法篇](http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html) 弹性布局讲的最好的
+
+[freecodecamp](https://learn.freecodecamp.org/)上完成题目熟悉前端代码
+
+[阿里的中后台UI组件库](https://github.com/ant-design/ant-design)源码、[Taro-UI](https://github.com/NervJS/taro-ui)源码、[iview](https://github.com/iview/iview) UI组件学习
+
+[冴羽的博客](https://github.com/mqyqingfeng/Blog)
+
+
+## 后台开发
+
+[纯洁的微笑](http://www.ityouknow.com/)  精通微服务架构
+
+[advanced-java](https://github.com/doocs/advanced-java) 分布式，高并发，微服务讲解最清晰的
 
 
 ## 职业规划
@@ -70,7 +71,6 @@
 [大公司](https://github.com/awanglilong/awanglilong.github.io/issues/3)
 
 
-
 ## 知名博客
 
 [冰霜之地](https://halfrost.com/)
@@ -78,7 +78,6 @@
 [MacTalk](http://macshuo.com)
 
 [游戏开发随笔](https://zhuanlan.zhihu.com/gu-yu)
-
 
 
 ## 技术团队
@@ -91,5 +90,5 @@
 
 [优设](https://www.uisdc.com/)     [zool](https://www.zcool.com.cn/)    [花瓣](https://huaban.com/) 
 
-[产品](http://www.woshipm.com/)      [pmcaff](https://www.pmcaff.com/)  [纯银V](https://www.jianshu.com/u/c22ccc510fb9)
+[产品](http://www.woshipm.com/)      [pmcaff](https://www.pmcaff.com/) 
 
