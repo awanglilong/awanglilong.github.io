@@ -55,7 +55,7 @@ kramdown:
 disqus_username: longlong
 
 # Netease settings
-netease_comment: ture
+netease_comment: false
 
 
 
