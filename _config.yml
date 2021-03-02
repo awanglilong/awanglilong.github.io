@@ -52,7 +52,7 @@ kramdown:
 
 
 # Disqus settings
-disqus_username: longlong
+# disqus_username: longlong
 
 # Netease settings
 netease_comment: false
