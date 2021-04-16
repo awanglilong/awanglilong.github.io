@@ -3,7 +3,7 @@ title: longlong Blog
 SEOTitle: 龙龙的博客 | longlong Blog
 header-img: img/home-bg.jpg
 email: 571275935@qq.com
-description: "关于前端与iOS | 黄玄，Web & Mobile Lover，Software Engineer | 这里是 longlong 的个人博客，与你一起发现更大的世界。"
+description: "关于前端与iOS,这里是 longlong 的个人博客，与你一起发现更大的世界。"
 keyword: "longlong , longlong的博客, Hux Blog, 博客, 个人网站, iOS, Web, JavaScript, 前端"
 url: "https://awanglilong.github.io/"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
@@ -55,7 +55,7 @@ kramdown:
 # disqus_username: longlong
 
 # Netease settings
-netease_comment: false
+# netease_comment: false
 
 
 
@@ -71,7 +71,7 @@ netease_comment: false
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "写写代码，做做设计，<br>离开世界之前，一切都是过程"
+sidebar-about-description: "写写代码，做做设计，<br> 一切都是过程"
 sidebar-avatar: /img/avatar-hux-one.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 

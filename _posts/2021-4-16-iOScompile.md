@@ -42,9 +42,7 @@ iOS开发使用Object-C和Swift编译语言，两者都需要通过编译器（C
 
 传统静态编译器（如大多数C编译器）最流行的设计是三阶段设计，其主要组件是前端，优化器和后端。 前端解析源代码，检查它是否有错误，并构建一个特定于语言的抽象语法树（AST）来表示输入代码。 AST可选地转换为新的表示以进行优化，优化器和后端在代码上运行。
 
-
-
-![img](https://upload-images.jianshu.io/upload_images/2664540-511eb8e90b8da635.png)
+![img](../img/post-ios-compile/2664540-511eb8e90b8da635.png)
 
 
 
@@ -52,9 +50,7 @@ iOS开发使用Object-C和Swift编译语言，两者都需要通过编译器（C
 
 在基于LLVM的编译器中，前端负责解析，验证和诊断输入代码中的错误，然后将解析的代码转换为LLVM IR（通常情况。但是也有例外，通过构建AST然后将AST转换为LLVM IR）。该IR可选地通过一系列改进代码的分析和优化过程提供，然后被发送到代码生成器以生成本机机器代码，如图下图所示。
 
-
-
-![img](https://upload-images.jianshu.io/upload_images/2664540-427466dab6dd63d8.png)
+![img](../img/post-ios-compile/2664540-427466dab6dd63d8.png)
 
 为什么要使用三相设计？优势在哪？
 
@@ -441,9 +437,6 @@ total 0x100003000
 - `__DATA` segment 以可读写和不可执行的方式映射。它包含了将会被更改的数据。
 - `__LINKEDIT` segment 指出了 link edit 表（包含符号和字符串的动态链接器表）的地址，里面包含了加载程序的元数据，例如函数的名称和地址。
 
-关于更详细的编译过程可以查看：
- [深入剖析 iOS 编译 Clang LLVM](https://github.com/ming1016/study/wiki/深入剖析-iOS-编译-Clang---LLVM)
-
 #### 4. Swift的编译过程
 
 在 [Swift 编译器结构](https://swift.org/compiler-stdlib/#compiler-architecture) 的官方文档中描述了 Swift 编译器是如何工作的，分为如下步骤：
@@ -457,7 +450,7 @@ total 0x100003000
 
 相关内容不详细讲解，可参考：https://blog.csdn.net/aas319/article/details/78606342
 
-### 三、 Cocoapods 原理
+## 三、 Cocoapods 原理
 
 使用了 Cocoapods 后，我们的编译流程会多出来一些，虽然每个 target 的编译流程都是一致的，但是 Cocoapods 是如何将这些库导入我们的项目、原项目和其他库之间的依赖又是如何实现的仍然是一个需要了解的知识点。
 
@@ -465,6 +458,15 @@ total 0x100003000
 - [Cocoapods原理总结](https://juejin.im/entry/59dd94b06fb9a0451463030b)
 - [CocoaPods 都做了什么？](https://zhuanlan.zhihu.com/p/22652365)
 
-### 总之
 
-LLVM 的编译过程是相当复杂的，中间牵扯到的技术和语言要比我们做一个简单的移动开发要复杂的多，本文也只是非常浅显的描述了相关的编译过程，其主要目的是为了在 iOS 开发中更加得心应手。
+
+##参考资料：
+
+[iOS编译原理](http://hchong.net/2019/07/30/iOS%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/)讲的更清晰一些
+
+[深入剖析 iOS 编译 Clang / LLVM](https://ming1016.github.io/2017/03/01/deeply-analyse-llvm/#Clang-%E7%BC%96%E8%AF%91-m-%E6%96%87%E4%BB%B6)讲的详细
+
+[iOS编译过程的原理和应用](https://blog.csdn.net/Hello_Hwc/article/details/53557308)
+
+[浅谈iOS编译过程](https://www.jianshu.com/p/5b2cce762106)
+
