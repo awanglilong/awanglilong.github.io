@@ -1,30 +1,89 @@
 [我的博客](https://awanglilong.github.io/)
 
-## 算法
+##移动端开发
 
-[fucking-algorithm](https://github.com/labuladong/fucking-algorithm)  提出算法结题框架
+### 编译原理
 
-[五分钟学算法](https://www.cxyxiaowu.com/) 算法动画做的最好的
+>简单来说分编译前端和编译后端，中间产物为IR。clang将OC语言编译为IR（swift使用的是swiftc），LLVM将IR编译为对应汇编。
+>
+>clang不会将OC转换为c++.
 
-## 设计模式
+[iOS编译原理](https://awanglilong.github.io/2021/04/16/iOScompile/)简单介绍OC的编译步骤和原理
 
-[图说设计模式](https://design-patterns.readthedocs.io/zh_CN/latest/) 时序图对理解设计模式非常有帮助
+### 动态库和静态库
 
-## 计算机网络
+>动态库优点是包小，可共用，能动态加载。缺点是加载速度慢。但可共用和动态加载Apple不允许使用。所以优点是包小，缺点是加载速度慢。
 
-[TCP协议详解](https://github.com/awanglilong/awanglilong.github.io/issues/15)
+[如何打造一个让人愉快的框架](https://onevcat.com/2016/01/create-framework/#cocoa-touch-framework) 介绍如何开发开源框架，介绍动态库和静态库。
 
-## 移动端开发
+[iOS 静态库和动态库](https://www.cnblogs.com/dins/p/ios-jing-tai-ku-he-dong-tai-ku.html) 动态库包小，静态库冷启动速度快
 
-[Laucp's Blog](https://chipengliu.github.io/)  源码分析
 
-[Analyze](https://github.com/draveness/analyze) iOS开源框架源码分析
+
+###iOS基础
+
+> OC语言底层原理研究方式主要通过读源码、clang转换为c++、看内存地址三种方式研究底层实现原理
+
+###OC语言
+
+[Swift（一）消息派发](https://awanglilong.github.io/2021/04/19/swift-message/)
+
+
+
+[OC语言（三）KVC与KVO](http://wenghengcong.com/posts/f4c075c4/)
+[OC语言（四）Category](http://wenghengcong.com/posts/b8e84edc/)
+[OC语言（五）load和initialize](http://wenghengcong.com/posts/a69d9d1f/)
+[OC语言（六）关联对象](http://wenghengcong.com/posts/5fe15e03/)
+[OC语言（七）Block与GCD](http://wenghengcong.com/posts/2fd17587/)
+
+
+
+###内存管理
+[内存管理（一）引入](http://wenghengcong.com/posts/4dedf510/)
+[内存管理（二）TaggedPointer](http://wenghengcong.com/posts/b6becb26/)
+[内存管理（三）MRC与ARC](http://wenghengcong.com/posts/21699584/)
+[内存管理（四）引用计数与weak](http://wenghengcong.com/posts/7162dd05/)
+[内存管理（五）copy](http://wenghengcong.com/posts/bf6902cc/)
+[内存管理（六）autorelease](http://wenghengcong.com/posts/c458827d/)
+
+###RunLoop
+[RunLoop（一）认识RunLoop](http://wenghengcong.com/posts/a520a466/)
+[RunLoop（二）对象](http://wenghengcong.com/posts/5c027118/)
+[RunLoop（三）运行](http://wenghengcong.com/posts/ec1e2951/)
+[RunLoop（四）应用](http://wenghengcong.com/posts/25ecb79e/)
+[组件化（三）静态库和动态库](https://wenghengcong.com/posts/2a2608b7/)
+
+###多线程
+[多线程（一）进程与线程](https://wenghengcong.com/posts/19969689/)
+[多线程（二）方案](https://wenghengcong.com/posts/6d5d08d4/)
+多线程（三）NSThread——待补
+多线程（四）NSOperation——待补
+多线程（五）GCD——待补
+[多线程（六）线程同步](https://wenghengcong.com/posts/656d5cc9/)
+[多线程（七）锁](https://wenghengcong.com/posts/b3d3fe6/)
+多线程（八）应用——待补
+
+###Modal解析
+[YYModel阅读摘要（一）基础](http://wenghengcong.com/posts/ec42f57/)
+[YYModel阅读摘要（二）特性](http://wenghengcong.com/posts/d41ed060/)
+[YYModel阅读摘要（三）参考](http://wenghengcong.com/posts/b9644035/)
+[构建iOSModel层（一）最简单的实现Model解析](http://wenghengcong.com/posts/814d3fa9/)
+[构建iOS-Model层（二）类型解析](http://wenghengcong.com/posts/e4c737c7/)
+[构建iOS-Model层（三）嵌套解析](http://wenghengcong.com/posts/e4b6b7db/)
+
+
+
+
+
+[Laucp'sBlog](https://chipengliu.github.io/)源码分析
+
+[Analyze](https://github.com/draveness/analyze)iOS开源框架源码分析
 
 [WebViewJavascriptBridge原理解析](https://www.jianshu.com/p/d45ce14278c7)
 
-[iOS应用架构谈](https://casatwy.com/iosying-yong-jia-gou-tan-kai-pian.html) iOS架构师写的
+[iOS应用架构谈](https://casatwy.com/iosying-yong-jia-gou-tan-kai-pian.html)iOS架构师写的
 
-[跳出面向对象思想(一) 继承](https://casatwy.com/tiao-chu-mian-xiang-dui-xiang-si-xiang-yi-ji-cheng.html)  但是一些基本体系的继承都在使用
+[跳出面向对象思想(一)继承](https://casatwy.com/tiao-chu-mian-xiang-dui-xiang-si-xiang-yi-ji-cheng.html)但是一些基本体系的继承都在使用
 
 [刘望舒的博客](http://liuwangshu.cn/)
 
@@ -32,40 +91,54 @@
 
 [APP性能检测方案汇总](https://www.jianshu.com/p/95df83780c8f)
 
-### swift
+###swift
 
-[Swift协议的使用](https://onevcat.com/2016/11/pop-cocoa-1/#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%E7%9A%84%E5%9B%B0%E5%A2%83) 使用Struct和Protocol的面向协议编程，是Swift的高效方式。
+[Swift协议的使用](https://onevcat.com/2016/11/pop-cocoa-1/#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%E7%9A%84%E5%9B%B0%E5%A2%83)使用Struct和Protocol的面向协议编程，是Swift的高效方式。
 
-[Swift 对象内存模型探究（一）](https://mp.weixin.qq.com/s/zIkB9KnAt1YPWGOOwyqY3Q)
+[Swift对象内存模型探究（一）](https://mp.weixin.qq.com/s/zIkB9KnAt1YPWGOOwyqY3Q)
 
 [swift之内存布局](https://www.jianshu.com/p/d341974404a7)
 
-[Swift Runtime - 类和对象](https://www.jianshu.com/p/6ae6754923b4)
+[SwiftRuntime-类和对象](https://www.jianshu.com/p/6ae6754923b4)
 
-[从源码解析 Swift 弱引用](https://zhuanlan.zhihu.com/p/58179258)
+[从源码解析Swift弱引用](https://zhuanlan.zhihu.com/p/58179258)
+
+##算法
+
+[fucking-algorithm](https://github.com/labuladong/fucking-algorithm)提出算法结题框架
+
+[五分钟学算法](https://www.cxyxiaowu.com/)算法动画做的最好的
+
+##设计模式
+
+[图说设计模式](https://design-patterns.readthedocs.io/zh_CN/latest/)时序图对理解设计模式非常有帮助
+
+##计算机网络
+
+[TCP协议详解](https://github.com/awanglilong/awanglilong.github.io/issues/15)
 
 
-## 前端开发
+##前端开发
 
-[千古壹号](https://github.com/qianguyihao/Web) 最好的前端入门教程，最主要是成体系
+[千古壹号](https://github.com/qianguyihao/Web)最好的前端入门教程，最主要是成体系
 
-[Flex 布局教程：语法篇](http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html) 弹性布局讲的最好的
+[Flex布局教程：语法篇](http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html)弹性布局讲的最好的
 
 [freecodecamp](https://learn.freecodecamp.org/)上完成题目熟悉前端代码
 
-[阿里的中后台UI组件库](https://github.com/ant-design/ant-design)源码、[Taro-UI](https://github.com/NervJS/taro-ui)源码、[iview](https://github.com/iview/iview) UI组件学习
+[阿里的中后台UI组件库](https://github.com/ant-design/ant-design)源码、[Taro-UI](https://github.com/NervJS/taro-ui)源码、[iview](https://github.com/iview/iview)UI组件学习
 
 [冴羽的博客](https://github.com/mqyqingfeng/Blog)
 
 
-## 后台开发
+##后台开发
 
-[纯洁的微笑](http://www.ityouknow.com/)  精通微服务架构
+[纯洁的微笑](http://www.ityouknow.com/)精通微服务架构
 
-[advanced-java](https://github.com/doocs/advanced-java) 分布式，高并发，微服务讲解最清晰的
+[advanced-java](https://github.com/doocs/advanced-java)分布式，高并发，微服务讲解最清晰的
 
 
-## 知名博客
+##知名博客
 
 [冰霜之地](https://halfrost.com/)
 
@@ -75,21 +148,20 @@
 
 [draveness](https://github.com/draveness/draveness)
 
-
-## 技术团队
-
 [美团技术团队](https://tech.meituan.com/)
 
+##UI与产品论坛
 
+[优设](https://www.uisdc.com/)[zool](https://www.zcool.com.cn/)[花瓣](https://huaban.com/)
 
-## UI与产品论坛
-
-[优设](https://www.uisdc.com/)     [zool](https://www.zcool.com.cn/)    [花瓣](https://huaban.com/) 
-
-[产品](http://www.woshipm.com/)      [pmcaff](https://www.pmcaff.com/) 
+[产品](http://www.woshipm.com/)[pmcaff](https://www.pmcaff.com/)
 
 [薪酬可视化](https://duibiao.info/visualization)
 
-## 工具
+##工具
 
-接口管理测试平台 [yapi](https://github.com/YMFE/yapi)
+接口管理测试平台[yapi](https://github.com/YMFE/yapi)
+
+
+
+

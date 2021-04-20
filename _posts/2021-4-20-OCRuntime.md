@@ -1,4 +1,15 @@
-OC运行时
+---
+layout:     post
+title:      "OC运行时机制"
+date:       2021-4-20 12:13:00
+author:     "wanglilong"
+header-img: "img/post-bg-2015.jpg"
+catalog: true
+tags:
+
+- iOS原理
+
+---
 
 ## 一、内存结构
 
@@ -70,9 +81,16 @@ struct method_t {
 
 ![objc-method-after-realize-class](https://img.draveness.me/2016-04-23-objc-method-after-realize-class.png)
 
+### 其它参考
+
 [深入解析 ObjC 中方法的结构](https://draveness.me/method-struct/)
 
+[OC语言（一）对象内存分析](http://wenghengcong.com/posts/38431d60/)
+[OC语言（二）对象的本质及分类](http://wenghengcong.com/posts/ec4474d1/)
+
 ## 二、继承的实现
+
+> isa指针是为了查找，方法和类方法。superclass是为了实现继承。方法查找可看成是树上的查找（更准确的说是有向图）。
 
 通过源码可以知道`isa`的`isa_t`类型的内部结构
 
@@ -91,28 +109,48 @@ union isa_t {
 
 ![img](https://img.draveness.me/2016-04-21-14611715787360.jpg)
 
-[从 NSObject 的初始化了解 isa](https://draveness.me/isa/)
+### 消息发送机制
 
-[isa 和 Class](https://halfrost.com/objc_runtime_isa_class/#toc-13)
+#### 一、消息发送
 
-[深入理解Objective-C：Category](https://tech.meituan.com/2015/03/03/diveintocategory.html)
+1、`objc_class`的cache中查找(二分查找)   
 
-2、消息发送机制
+​      cache是个散列表，散列函数为`f(@selector()) = @selector() & _mask`，散列处理方式是--i；
+
+2、`class_rw_t`的方法列表中查找，如果方法没排序遍历查找，如果排序则二分查找
+
+3、从superclass的的cache中查找
+
+4、从superclass的`rw_t`中查找
+
+(查找结束后，将方法添加到缓存中)
+
+#### 二、动态解析
+
+1、是否已动态解析---->下个阶段
+
+2、resolveInstanceMethod:
+
+​      resolveClassMethod：
+
+3、标注已动态解析
+
+4、动态解析后，重走消息发送流程
+
+#### 三、消息转发
+
+1、forwardingTargetForSelector.  --------->消息转发另个对象
+
+2、methodSignatureForSelector.  ----------->完备消息转发
+
+3、doesNotRecognizeSelecter（抛出异常）
 
 
 
+###运行时
 
-
-
-
-
-
-4、分类实现原理
-
-
-
-5、关联对象
-
-
-
-6、KVO实现
+[Runtime（一）Runtime简介](http://wenghengcong.com/posts/a182534/)
+[Runtime（二）isa指针](http://wenghengcong.com/posts/1574014f/)  [从 NSObject 的初始化了解 isa](https://draveness.me/isa/)   [isa 和 Class](https://halfrost.com/objc_runtime_isa_class/#toc-13)
+[Runtime（三）方法缓存](http://wenghengcong.com/posts/497dcda2/)
+[Runtime（四）objc_msgSend](http://wenghengcong.com/posts/de99a8a4/)
+[Runtime（五）类的判定](http://wenghengcong.com/posts/bb109840/)
