@@ -18,31 +18,21 @@
 
 [iOS 静态库和动态库](https://www.cnblogs.com/dins/p/ios-jing-tai-ku-he-dong-tai-ku.html) 动态库包小，静态库冷启动速度快
 
-
-
 ### iOS基础
 
 > OC语言底层原理研究方式主要通过读源码、clang转换为c++、看内存地址三种方式研究底层实现原理
 
-### OC语言
+#### 语言基础
 
-[Swift（一）消息派发](https://awanglilong.github.io/2021/04/19/swift-message/)
+[OC语言（一）Runtime](https://awanglilong.github.io/2021/04/20/OCRuntime/)  OC的消息派发主要是通过有向图，通过图上搜索的方式，复杂度最高，灵活性最好。
 
-[OC语言（一）Runtime](https://awanglilong.github.io/2021/04/20/OCRuntime/)
+[OC语言（二）Block与GCD](http://wenghengcong.com/posts/2fd17587/)
 
-[OC语言（三）KVC与KVO](http://wenghengcong.com/posts/f4c075c4/)
+[Swift（一）对象内存模型](https://mp.weixin.qq.com/s/zIkB9KnAt1YPWGOOwyqY3Q)  Swift的对象的内存模型也是结构体，复杂度比OC低
 
-[OC语言（四）Category](http://wenghengcong.com/posts/b8e84edc/)
+[Swift（二）消息派发](https://awanglilong.github.io/2021/04/19/swift-message/)  结构体消息派发是直接派发，类的消息派发主要是虚派表
 
-[OC语言（五）load和initialize](http://wenghengcong.com/posts/a69d9d1f/)
-
-[OC语言（六）关联对象](http://wenghengcong.com/posts/5fe15e03/)
-
-[OC语言（七）Block与GCD](http://wenghengcong.com/posts/2fd17587/)
-
-
-
-### 内存管理
+#### 内存管理
 [内存管理（一）引入](http://wenghengcong.com/posts/4dedf510/)
 
 [内存管理（二）TaggedPointer](http://wenghengcong.com/posts/b6becb26/)
@@ -56,7 +46,7 @@
 [内存管理（六）autorelease](http://wenghengcong.com/posts/c458827d/)
 
 
-### RunLoop
+#### RunLoop
 [RunLoop（一）认识RunLoop](http://wenghengcong.com/posts/a520a466/)
 
 [RunLoop（二）对象](http://wenghengcong.com/posts/5c027118/)
@@ -67,7 +57,7 @@
 
 [组件化（三）静态库和动态库](https://wenghengcong.com/posts/2a2608b7/)
 
-### 多线程
+#### 多线程
 [多线程（一）进程与线程](https://wenghengcong.com/posts/19969689/)
 
 [多线程（二）方案](https://wenghengcong.com/posts/6d5d08d4/)
@@ -84,7 +74,7 @@
 
 多线程（八）应用——待补
 
-### Modal解析
+#### Modal解析
 [YYModel阅读摘要（一）基础](http://wenghengcong.com/posts/ec42f57/)
 
 [YYModel阅读摘要（二）特性](http://wenghengcong.com/posts/d41ed060/)
@@ -115,7 +105,7 @@
 
 [APP性能检测方案汇总](https://www.jianshu.com/p/95df83780c8f)
 
-### swift
+#### swift
 
 [Swift协议的使用](https://onevcat.com/2016/11/pop-cocoa-1/#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%E7%9A%84%E5%9B%B0%E5%A2%83)使用Struct和Protocol的面向协议编程，是Swift的高效方式。
 
@@ -173,6 +163,8 @@
 [draveness](https://github.com/draveness/draveness)
 
 [美团技术团队](https://tech.meituan.com/)
+
+ [evilimo](https://www.evilimo.com/)
 
 ## UI与产品论坛
 

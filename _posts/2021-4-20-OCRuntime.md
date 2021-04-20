@@ -148,6 +148,40 @@ union isa_t {
 
 
 
+`addMethod`直接在二维方法数组末尾添加一个数组
+
+```c
+static IMP  addMethod(Class cls, SEL name, IMP imp, const char *types, bool replace)
+{
+    IMP result = nil;
+    method_t *m;
+    if ((m = getMethodNoSuper_nolock(cls, name))) {
+        // already exists
+        if (!replace) {
+            result = m->imp(false);
+        } else {
+            result = _method_setImplementation(cls, m, imp);
+        }
+    } else {
+        // fixme optimize
+        method_list_t *newlist;
+        newlist = (method_list_t *)calloc(method_list_t::byteSize(method_t::bigSize, 1), 1);
+        newlist->entsizeAndFlags = 
+            (uint32_t)sizeof(struct method_t::big) | fixed_up_method_list;
+        newlist->count = 1;
+        auto &first = newlist->begin()->big();
+        first.name = name;
+        first.types = strdupIfMutable(types);
+        first.imp = imp;
+        addMethods_finish(cls, newlist);
+        result = nil;
+    }
+    return result;
+}
+```
+
+
+
 ###运行时
 
 [Runtime（一）Runtime简介](http://wenghengcong.com/posts/a182534/)
@@ -159,4 +193,152 @@ union isa_t {
 [Runtime（四）objc_msgSend](http://wenghengcong.com/posts/de99a8a4/)
 
 [Runtime（五）类的判定](http://wenghengcong.com/posts/bb109840/)
+
+
+
+## 三、分类
+
+分类的内存结构大体如下
+
+```c
+truct category_t {
+    const char *name; //分类名
+    classref_t cls; //类
+    struct method_list_t *instanceMethods;//实例方法列表
+    struct method_list_t *classMethods; //类方法列表
+    struct protocol_list_t *protocols; //协议列表
+    struct property_list_t *instanceProperties; //属性列表
+    struct property_list_t *_classProperties;
+};
+```
+
+1、在运行时加载阶段，会依次加载类相应的分类。
+
+2、分类的方法和实例变量合并到`class_rw_t`相应的二维数组中。
+
+3、后合并的分类数据，放到原来数据的前面。
+
+
+
+```c
+static void
+attachCategories(Class cls, const locstamped_category_t *cats_list, uint32_t cats_count,
+                 int flags)
+{
+    /*
+     * Only a few classes have more than 64 categories during launch.
+     * This uses a little stack, and avoids malloc.
+     *
+     * Categories must be added in the proper order, which is back
+     * to front. To do that with the chunking, we iterate cats_list
+     * from front to back, build up the local buffers backwards,
+     * and call attachLists on the chunks. attachLists prepends the
+     * lists, so the final result is in the expected order.
+     */
+    constexpr uint32_t ATTACH_BUFSIZ = 64;
+    method_list_t   *mlists[ATTACH_BUFSIZ];
+    property_list_t *proplists[ATTACH_BUFSIZ];
+    protocol_list_t *protolists[ATTACH_BUFSIZ];
+
+    uint32_t mcount = 0;
+    uint32_t propcount = 0;
+    uint32_t protocount = 0;
+    bool fromBundle = NO;
+    bool isMeta = (flags & ATTACH_METACLASS);
+    auto rwe = cls->data()->extAllocIfNeeded();
+
+    for (uint32_t i = 0; i < cats_count; i++) {
+        auto& entry = cats_list[i];
+        method_list_t *mlist = entry.cat->methodsForMeta(isMeta);
+        if (mlist) {
+            if (mcount == ATTACH_BUFSIZ) {
+                prepareMethodLists(cls, mlists, mcount, NO, fromBundle, __func__);
+                rwe->methods.attachLists(mlists, mcount);
+                mcount = 0;
+            }
+            mlists[ATTACH_BUFSIZ - ++mcount] = mlist;
+            fromBundle |= entry.hi->isBundle();
+        }
+
+        property_list_t *proplist =
+            entry.cat->propertiesForMeta(isMeta, entry.hi);
+        if (proplist) {
+            if (propcount == ATTACH_BUFSIZ) {
+                rwe->properties.attachLists(proplists, propcount);
+                propcount = 0;
+            }
+            proplists[ATTACH_BUFSIZ - ++propcount] = proplist;
+        }
+
+        protocol_list_t *protolist = entry.cat->protocolsForMeta(isMeta);
+        if (protolist) {
+            if (protocount == ATTACH_BUFSIZ) {
+                rwe->protocols.attachLists(protolists, protocount);
+                protocount = 0;
+            }
+            protolists[ATTACH_BUFSIZ - ++protocount] = protolist;
+        }
+    }
+
+    if (mcount > 0) {
+        prepareMethodLists(cls, mlists + ATTACH_BUFSIZ - mcount, mcount,
+                           NO, fromBundle, __func__);
+        rwe->methods.attachLists(mlists + ATTACH_BUFSIZ - mcount, mcount);
+        if (flags & ATTACH_EXISTING) {
+            flushCaches(cls, __func__, [](Class c){
+                // constant caches have been dealt with in prepareMethodLists
+                // if the class still is constant here, it's fine to keep
+                return !c->cache.isConstantOptimizedCache();
+            });
+        }
+    }
+    rwe->properties.attachLists(proplists + ATTACH_BUFSIZ - propcount, propcount);
+    rwe->protocols.attachLists(protolists + ATTACH_BUFSIZ - protocount, protocount);
+}
+
+```
+
+
+
+[OC语言（三）Category](http://wenghengcong.com/posts/b8e84edc/)
+
+
+
+## 四、关联对象
+
+通过单例存储一个两层的Map。
+
+第一层Map，类（实例）为Key，map为value。
+
+第二层Map，关联对象为Key，关联的对象为value。
+
+[OC语言（四）关联对象](http://wenghengcong.com/posts/5fe15e03/)
+
+
+
+## 五、KVC和KVO
+
+KVO通过动态子类的方式实现观察者模式。
+
+当为类添加KVO时，动态为类对象创建一个子类。
+
+覆盖kvo对象的set方法。
+
+```c
+-(void)_setValueAndNotify{
+  willChangeValueForKey();
+  setAge();
+  didChangeValueForKey();
+}
+```
+
+[OC语言（五）KVC与KVO](http://wenghengcong.com/posts/f4c075c4/)
+
+
+
+## 六、load和initialize
+
+<img src="http://blog-1251606168.file.myqcloud.com/blog_2018/2018-12-11-120613.png" style="zoom: 50%;" />
+
+[OC语言（六）load和initialize](http://wenghengcong.com/posts/a69d9d1f/)
 
