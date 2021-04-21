@@ -164,7 +164,9 @@
 
 [美团技术团队](https://tech.meituan.com/)
 
- [evilimo](https://www.evilimo.com/)
+[evilimo](https://www.evilimo.com/)
+
+[xuebaonline](https://www.xuebaonline.com)
 
 ## UI与产品论坛
 
