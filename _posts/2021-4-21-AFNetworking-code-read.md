@@ -13,12 +13,12 @@ tags:
 
 阅读源码千头万绪，即使是分析文章也很少有能讲解清楚。真正对读懂整个框架结构帮助最大的是设计模式。识别框架中使用的设计模式，既能学习别人使用设计模式和原理的方式，也能快速掌握整个框架脉络。并且能帮助记忆。
 
-## 概述
+### 概述
 
 整个AFNetworking框架的核心类是`AFURLSessionManager`,主要封装了系统类`NSURLSession`进行网络请求。
 ![](https://img2020.cnblogs.com/blog/720083/202104/720083-20210408150815303-1332270787.png)
 
-### AFHTTPSessionManager
+#### AFHTTPSessionManager
 
 `AFHTTPSessionManager`继承自`AFURLSessionManager`。
 
@@ -30,7 +30,7 @@ tags:
 
 
 
-### AFURLRequestSerialization
+#### AFURLRequestSerialization
 
 `AFURLRequestSerialization`主要功能是处理网络请求参数和请求头，做网络请求的前期处理。对应HTTP请求的Request，这种对应关系能方便了解HTTP协议的，快速理解使用框架。
 
@@ -43,7 +43,7 @@ tags:
 
 
 
-### AFURLResponseSerialization
+#### AFURLResponseSerialization
 
 `AFURLResponseSerialization`主要功能是处理网络请求响应，做网络请求返回数据处理。对应HTTP请求的Response，这种对应关系能方便了解HTTP协议的，快速理解使用框架。
 
@@ -54,7 +54,7 @@ tags:
 
 
 
-###  AFSecurityPolicy
+####  AFSecurityPolicy
 
 `AFSecurityPolicy` 是 `AFNetworking` 用来保证 HTTP 请求安全的类，它被 `AFURLSessionManager` 持有，如果你在 `AFURLSessionManager` 的实现文件中搜索 *self.securityPolicy*，你只会得到两条结果：
 
@@ -95,7 +95,7 @@ didReceiveChallenge:(NSURLAuthenticationChallenge *)challenge
 
 如果没有传入 `taskDidReceiveAuthenticationChallenge` block，只有在上述方法返回 `YES` 时，才会获得认证凭证 `credential`。仅仅是一个工具类。
 
-###  AFNetworkReachabilityManager
+####  AFNetworkReachabilityManager
 
 与 `AFSecurityPolicy` 相同，`AFURLSessionManager` 对网络状态的监控是由 `AFNetworkReachabilityManager` 来负责的，通过`AFURLSessionManager`持有一个 `AFNetworkReachabilityManager` 的对象。仅仅是一个工具类。
 
@@ -103,11 +103,11 @@ didReceiveChallenge:(NSURLAuthenticationChallenge *)challenge
 
 
 
-##AFURLSessionManager
+####AFURLSessionManager
 
 除去其它分支，真正难理解的就是`AFURLSessionManager`类做了什么。`AFURLSessionManager`是基于`NSURLSession`的封装,所以想理解`AFURLSessionManager`，首先需要理解[NSURLSession](https://www.cnblogs.com/awanglilong/p/14622435.html)的使用。
 
-### 创建 `NSURLSessionTask`
+##### 创建 `NSURLSessionTask`
 
 创建 `NSURLSessionDataTask` 的实例，同时处理`NSURLSessionTask`的回调。
 
@@ -179,13 +179,13 @@ didReceiveChallenge:(NSURLAuthenticationChallenge *)challenge
 
 
 
-### 使用 `AFURLSessionManagerTaskDelegate` 管理进度
+##### 使用 `AFURLSessionManagerTaskDelegate` 管理进度
 
 在上面我们提到过 `AFURLSessionManagerTaskDelegate` 类，它主要为 task 提供**进度管理**功能，并在 task 结束时**回调**， 也就是调用在 `- [AFURLSessionManager dataTaskWithRequest:uploadProgress:downloadProgress:completionHandler:]` 等方法中传入的 `completionHandler`。
 
 
 
-#### 代理方法 `URLSession:task:didCompleteWithError:`
+##### 代理方法 `URLSession:task:didCompleteWithError:`
 
 在每一个 `NSURLSessionTask` 结束时，都会在代理方法 `URLSession:task:didCompleteWithError:` 中：
 
@@ -275,7 +275,7 @@ dispatch_async(url_session_manager_processing_queue(), ^{
 });
 ```
 
-#### 代理方法 `URLSession:dataTask:didReceiveData:` 和 `- URLSession:downloadTask:didFinishDownloadingToURL:`
+##### 代理方法 `URLSession:dataTask:didReceiveData:` 和 `- URLSession:downloadTask:didFinishDownloadingToURL:`
 
 这两个代理方法分别会在收到数据或者完成下载对应文件时调用，作用分别是为 `mutableData` 追加数据和处理下载的文件：
 
@@ -307,7 +307,7 @@ didFinishDownloadingToURL:(NSURL *)location
 }
 ```
 
-### 网络请求回调转换成`Block`
+#### 网络请求回调转换成`Block`
 
 这类里相当一部分代码，是为了将网络请求delegate回调转换为block。这样可以将每个网络请求的区分开，不需要用户自己判断。但不知道为何不用系统方法的block返回，可能是系统的block返回设计的过于简单。
 
@@ -372,7 +372,7 @@ didFinishDownloadingToURL:(NSURL *)location
 
 
 
-## ICNetworkingSDK
+### ICNetworkingSDK
 
 `ICNetworkingSDK`是自定义网络请求框架。
 
