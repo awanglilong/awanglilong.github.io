@@ -34,7 +34,24 @@
 
 [Swift（三）协议的使用](https://onevcat.com/2016/11/pop-cocoa-1/#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%E7%9A%84%E5%9B%B0%E5%A2%83)使用Struct和Protocol的面向协议编程，是Swift的高效方式。
 
+#### 多线程
+
+[多线程（一）方案](https://wenghengcong.com/posts/6d5d08d4/)
+
+多线程（三）NSThread——待补
+
+多线程（四）NSOperation——待补
+
+多线程（五）GCD——待补
+
+[多线程（六）线程同步](https://wenghengcong.com/posts/656d5cc9/)
+
+[多线程（七）锁](https://wenghengcong.com/posts/b3d3fe6/)
+
+
+
 #### 内存管理
+
 [内存管理（一）引入](http://wenghengcong.com/posts/4dedf510/)
 
 [内存管理（二）TaggedPointer](http://wenghengcong.com/posts/b6becb26/)
@@ -61,22 +78,7 @@
 
 [RunLoop（四）应用](http://wenghengcong.com/posts/25ecb79e/)
 
-#### 多线程
-[多线程（一）进程与线程](https://wenghengcong.com/posts/19969689/)
 
-[多线程（二）方案](https://wenghengcong.com/posts/6d5d08d4/)
-
-多线程（三）NSThread——待补
-
-多线程（四）NSOperation——待补
-
-多线程（五）GCD——待补
-
-[多线程（六）线程同步](https://wenghengcong.com/posts/656d5cc9/)
-
-[多线程（七）锁](https://wenghengcong.com/posts/b3d3fe6/)
-
-多线程（八）应用——待补
 
 #### Modal解析
 [YYModel阅读摘要（一）基础](http://wenghengcong.com/posts/ec42f57/)
