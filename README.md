@@ -26,7 +26,9 @@
 
 [OC语言（一）Runtime](https://awanglilong.github.io/2021/04/20/OCRuntime/)  OC的消息派发主要是通过有向图，通过图上搜索的方式，复杂度最高，灵活性最好。
 
-[Swift（一）对象内存模型](https://mp.weixin.qq.com/s/zIkB9KnAt1YPWGOOwyqY3Q)  Swift的对象的内存模型也是结构体，复杂度比OC低
+[OC语言（二）Block与GCD](http://wenghengcong.com/posts/2fd17587/)
+
+[Swift（一）对象内存模型](https://mp.weixin.qq.com/s/zIkB9KnAt1YPWGOOwyqY3Q)  Swift的对象的内存模型也是结构体，复杂度比OC低 [Swift 中的类](https://www.jianshu.com/p/07f7523f2d6d)
 
 [Swift（二）消息派发](https://awanglilong.github.io/2021/04/19/swift-message/)  结构体消息派发是直接派发，类的消息派发主要是虚派表
 
@@ -156,7 +158,9 @@
 
 [美团技术团队](https://tech.meituan.com/)
 
- [evilimo](https://www.evilimo.com/)
+[evilimo](https://www.evilimo.com/)
+
+[xuebaonline](https://www.xuebaonline.com)
 
 ## UI与产品论坛
 
