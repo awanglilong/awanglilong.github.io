@@ -26,11 +26,11 @@
 
 [OC语言（一）Runtime](https://awanglilong.github.io/2021/04/20/OCRuntime/)  OC的消息派发主要是通过有向图，通过图上搜索的方式，复杂度最高，灵活性最好。
 
-[OC语言（二）Block与GCD](http://wenghengcong.com/posts/2fd17587/)
-
 [Swift（一）对象内存模型](https://mp.weixin.qq.com/s/zIkB9KnAt1YPWGOOwyqY3Q)  Swift的对象的内存模型也是结构体，复杂度比OC低
 
 [Swift（二）消息派发](https://awanglilong.github.io/2021/04/19/swift-message/)  结构体消息派发是直接派发，类的消息派发主要是虚派表
+
+[Swift（三）协议的使用](https://onevcat.com/2016/11/pop-cocoa-1/#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%E7%9A%84%E5%9B%B0%E5%A2%83)使用Struct和Protocol的面向协议编程，是Swift的高效方式。
 
 #### 内存管理
 [内存管理（一）引入](http://wenghengcong.com/posts/4dedf510/)
@@ -44,6 +44,10 @@
 [内存管理（五）copy](http://wenghengcong.com/posts/bf6902cc/)
 
 [内存管理（六）autorelease](http://wenghengcong.com/posts/c458827d/)
+
+[从源码解析Swift弱引用](https://zhuanlan.zhihu.com/p/58179258)
+
+[OC语言（二）Block与GCD](http://wenghengcong.com/posts/2fd17587/)
 
 
 #### RunLoop
@@ -104,18 +108,6 @@
 [iOS卡顿问题处理](https://blog.ibireme.com/2015/11/12/smooth_user_interfaces_for_ios/)
 
 [APP性能检测方案汇总](https://www.jianshu.com/p/95df83780c8f)
-
-#### swift
-
-[Swift协议的使用](https://onevcat.com/2016/11/pop-cocoa-1/#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%E7%9A%84%E5%9B%B0%E5%A2%83)使用Struct和Protocol的面向协议编程，是Swift的高效方式。
-
-[Swift对象内存模型探究（一）](https://mp.weixin.qq.com/s/zIkB9KnAt1YPWGOOwyqY3Q)
-
-[swift之内存布局](https://www.jianshu.com/p/d341974404a7)
-
-[SwiftRuntime-类和对象](https://www.jianshu.com/p/6ae6754923b4)
-
-[从源码解析Swift弱引用](https://zhuanlan.zhihu.com/p/58179258)
 
 ## 算法
 
