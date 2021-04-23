@@ -38,17 +38,9 @@
 
 [多线程（一）方案](https://wenghengcong.com/posts/6d5d08d4/)
 
-多线程（三）NSThread——待补
+[多线程（二）锁](https://wenghengcong.com/posts/b3d3fe6/)
 
-多线程（四）NSOperation——待补
-
-多线程（五）GCD——待补
-
-[多线程（六）线程同步](https://wenghengcong.com/posts/656d5cc9/)
-
-[多线程（七）锁](https://wenghengcong.com/posts/b3d3fe6/)
-
-
+[多线程（三）NSOperation](https://www.cnblogs.com/dins/p/nsoperationqueue.html)
 
 #### 内存管理
 
@@ -97,7 +89,13 @@
 
 [AFNetworking源码解读](https://awanglilong.github.io/2021/04/21/AFNetworking-code-read/)
 
+[Aspect](https://halfrost.com/ios_aspect/#toc-17)源码分析
 
+[fishhook](https://juejin.cn/post/6844904175625568270)源码分析
+
+#### 问题
+
+[iOS拾遗——为什么必须在主线程操作UI](https://juejin.cn/post/6844903763011076110)
 
 
 
