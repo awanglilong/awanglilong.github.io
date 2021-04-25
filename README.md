@@ -26,7 +26,7 @@
 
 [OC语言（一）Runtime](https://awanglilong.github.io/2021/04/20/OCRuntime/)  OC的消息派发主要是通过有向图，通过图上搜索的方式，复杂度最高，灵活性最好。
 
-[OC语言（二）Block与GCD](http://wenghengcong.com/posts/2fd17587/)
+[OC语言（二）Block与GCD](http://wenghengcong.com/posts/2fd17587/)    ?????
 
 [Swift（一）对象内存模型](https://mp.weixin.qq.com/s/zIkB9KnAt1YPWGOOwyqY3Q)  Swift的对象的内存模型也是结构体，复杂度比OC低 [Swift 中的类](https://www.jianshu.com/p/07f7523f2d6d)
 
@@ -48,17 +48,19 @@
 
 [内存管理（二）TaggedPointer](http://wenghengcong.com/posts/b6becb26/)
 
-[内存管理（三）MRC与ARC](http://wenghengcong.com/posts/21699584/)
+[内存管理（三）引用计数与weak](http://wenghengcong.com/posts/7162dd05/)
 
-[内存管理（四）引用计数与weak](http://wenghengcong.com/posts/7162dd05/)
+[内存管理（四）copy](http://wenghengcong.com/posts/bf6902cc/)
 
-[内存管理（五）copy](http://wenghengcong.com/posts/bf6902cc/)
+[内存管理（五）autorelease](http://wenghengcong.com/posts/c458827d/)
 
-[内存管理（六）autorelease](http://wenghengcong.com/posts/c458827d/)
+[内存管理（六）Swift弱引用](https://zhuanlan.zhihu.com/p/58179258) 、
 
-[从源码解析Swift弱引用](https://zhuanlan.zhihu.com/p/58179258)
+Swift的弱引用是SideTable管理，是个散列表，但是存的是指出的weak对象。
 
-[OC语言（二）Block与GCD](http://wenghengcong.com/posts/2fd17587/)
+OC的弱引用是SideTable管理，是个全局三层散列表，weak_entry_t里存的是指向当前对象的，weak对象。
+
+
 
 
 #### RunLoop
