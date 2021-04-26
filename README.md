@@ -54,16 +54,14 @@
 
 [内存管理（五）autorelease](http://wenghengcong.com/posts/c458827d/)
 
-[内存管理（六）Swift弱引用](https://zhuanlan.zhihu.com/p/58179258) 、
+[内存管理（六）Swift弱引用](https://zhuanlan.zhihu.com/p/58179258) 
 
 Swift的弱引用是SideTable管理，是个散列表，但是存的是指出的weak对象。
 
 OC的弱引用是SideTable管理，是个全局三层散列表，weak_entry_t里存的是指向当前对象的，weak对象。
 
-
-
-
 #### RunLoop
+
 [RunLoop（一）认识RunLoop](http://wenghengcong.com/posts/a520a466/)
 
 [RunLoop（二）对象](http://wenghengcong.com/posts/5c027118/)
@@ -74,7 +72,18 @@ OC的弱引用是SideTable管理，是个全局三层散列表，weak_entry_t里
 
 
 
+
+
+### 源码解读
+
+[AFNetworking源码解读](https://awanglilong.github.io/2021/04/21/AFNetworking-code-read/)
+
+[Aspect](https://halfrost.com/ios_aspect/#toc-17)源码分析
+
+[fishhook](https://juejin.cn/post/6844904175625568270)源码分析
+
 #### Modal解析
+
 [YYModel阅读摘要（一）基础](http://wenghengcong.com/posts/ec42f57/)
 
 [YYModel阅读摘要（二）特性](http://wenghengcong.com/posts/d41ed060/)
@@ -87,19 +96,9 @@ OC的弱引用是SideTable管理，是个全局三层散列表，weak_entry_t里
 
 [构建iOS-Model层（三）嵌套解析](http://wenghengcong.com/posts/e4b6b7db/)
 
-### 源码解读
-
-[AFNetworking源码解读](https://awanglilong.github.io/2021/04/21/AFNetworking-code-read/)
-
-[Aspect](https://halfrost.com/ios_aspect/#toc-17)源码分析
-
-[fishhook](https://juejin.cn/post/6844904175625568270)源码分析
-
 #### 问题
 
 [iOS拾遗——为什么必须在主线程操作UI](https://juejin.cn/post/6844903763011076110)
-
-
 
 [Laucp'sBlog](https://chipengliu.github.io/)源码分析
 
@@ -129,7 +128,11 @@ OC的弱引用是SideTable管理，是个全局三层散列表，weak_entry_t里
 
 ## 计算机网络
 
+[网络技术概览](https://dirtmelon.github.io/posts/high-performance-browser-networking-first/#%E5%BB%B6%E8%BF%9F%E4%B8%8E%E5%B8%A6%E5%AE%BD)
+
 [TCP协议详解](https://github.com/awanglilong/awanglilong.github.io/issues/15)
+
+[HTTP](https://dirtmelon.github.io/posts/high-performance-browser-networking-second/#http-20)
 
 
 ## 前端开发
@@ -152,6 +155,19 @@ OC的弱引用是SideTable管理，是个全局三层散列表，weak_entry_t里
 [advanced-java](https://github.com/doocs/advanced-java)分布式，高并发，微服务讲解最清晰的
 
 
+
+## 数字货币
+
+[加密货币的本质](http://www.ruanyifeng.com/blog/2018/01/cryptocurrency-tutorial.html)
+
+[比特币入门教程](http://www.ruanyifeng.com/blog/2018/01/bitcoin-tutorial.html)
+
+[区块链入门教程](http://www.ruanyifeng.com/blog/2017/12/blockchain-tutorial.html)
+
+
+## 
+
+
 ## 知名博客
 
 [冰霜之地](https://halfrost.com/)
@@ -167,6 +183,8 @@ OC的弱引用是SideTable管理，是个全局三层散列表，weak_entry_t里
 [evilimo](https://www.evilimo.com/)
 
 [xuebaonline](https://www.xuebaonline.com)
+
+[ruanyifeng](http://www.ruanyifeng.com/)
 
 ## UI与产品论坛
 
