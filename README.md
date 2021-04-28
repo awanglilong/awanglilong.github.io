@@ -26,7 +26,7 @@
 
 [OC语言（一）Runtime](https://awanglilong.github.io/2021/04/20/OCRuntime/)  OC的消息派发主要是通过有向图，通过图上搜索的方式，复杂度最高，灵活性最好。
 
-[OC语言（二）Block与GCD](http://wenghengcong.com/posts/2fd17587/)    ?????
+[OC语言（二）Block的实现](https://blog.devtang.com/2013/07/28/a-look-inside-blocks/) 
 
 [Swift（一）对象内存模型](https://mp.weixin.qq.com/s/zIkB9KnAt1YPWGOOwyqY3Q)  Swift的对象的内存模型也是结构体，复杂度比OC低 [Swift 中的类](https://www.jianshu.com/p/07f7523f2d6d)
 
@@ -76,11 +76,11 @@ OC的弱引用是SideTable管理，是个全局三层散列表，weak_entry_t里
 
 [fishhook](https://juejin.cn/post/6844904175625568270)源码分析
 
+[Analyze](https://github.com/draveness/analyze)iOS开源框架源码分析
 
+[Laucp'sBlog](https://chipengliu.github.io/)源码分析
 
-
-
-#### Modal解析
+[WebViewJavascriptBridge原理解析](https://www.jianshu.com/p/d45ce14278c7)
 
 [YYModel阅读摘要（一）基础](http://wenghengcong.com/posts/ec42f57/)
 
@@ -94,27 +94,33 @@ OC的弱引用是SideTable管理，是个全局三层散列表，weak_entry_t里
 
 [构建iOS-Model层（三）嵌套解析](http://wenghengcong.com/posts/e4b6b7db/)
 
-### 其它问题
+[JJException](https://github.com/jezzmemo/JJException)
+
+[iOS Crash防护](https://juejin.cn/post/6874435201632583694)
+
+### 面试问题
+
+[2020年iOS面试题总结](https://www.xuebaonline.com/2020%E5%B9%B4iOS%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93(%E4%B8%80)/)
+
+[2020年iOS面试题总结(二)](https://www.xuebaonline.com/2020%E5%B9%B4iOS%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93(%E4%BA%8C)/)
+
+[2020年iOS面试题总结(三)](https://www.xuebaonline.com/2020%E5%B9%B4iOS%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93(%E4%B8%89)/)
+
+[iOSInterviewQuestions](https://github.com/ChenYilong/iOSInterviewQuestions)
+
+[iOS知识思维导图](https://github.com/MisterBooo/ReadyForBAT)
+
+[出一套 iOS 高级面试题](https://juejin.cn/post/6844903645243260941#heading-2)
+
+[iOS卡顿问题处理](https://blog.ibireme.com/2015/11/12/smooth_user_interfaces_for_ios/)
 
 [iOS拾遗——为什么必须在主线程操作UI](https://juejin.cn/post/6844903763011076110)
 
-
-
-[Laucp'sBlog](https://chipengliu.github.io/)源码分析
-
-[Analyze](https://github.com/draveness/analyze)iOS开源框架源码分析
-
-[WebViewJavascriptBridge原理解析](https://www.jianshu.com/p/d45ce14278c7)
+[APP性能检测方案汇总](https://www.jianshu.com/p/95df83780c8f)
 
 [iOS应用架构谈](https://casatwy.com/iosying-yong-jia-gou-tan-kai-pian.html)iOS架构师写的
 
 [跳出面向对象思想(一)继承](https://casatwy.com/tiao-chu-mian-xiang-dui-xiang-si-xiang-yi-ji-cheng.html)但是一些基本体系的继承都在使用
-
-[刘望舒的博客](http://liuwangshu.cn/)
-
-[iOS卡顿问题处理](https://blog.ibireme.com/2015/11/12/smooth_user_interfaces_for_ios/)
-
-[APP性能检测方案汇总](https://www.jianshu.com/p/95df83780c8f)
 
 ## 算法
 
@@ -122,11 +128,13 @@ OC的弱引用是SideTable管理，是个全局三层散列表，weak_entry_t里
 
 [五分钟学算法](https://www.cxyxiaowu.com/)算法动画做的最好的
 
+[小浩算法](https://www.geekxh.com/)
+
 ## 设计模式
 
 [图说设计模式](https://design-patterns.readthedocs.io/zh_CN/latest/)时序图对理解设计模式非常有帮助
 
-## 计算机网络
+## 计算机基础
 
 [网络技术概览](https://dirtmelon.github.io/posts/high-performance-browser-networking-first/#%E5%BB%B6%E8%BF%9F%E4%B8%8E%E5%B8%A6%E5%AE%BD)
 
@@ -134,74 +142,63 @@ OC的弱引用是SideTable管理，是个全局三层散列表，weak_entry_t里
 
 [HTTP](https://dirtmelon.github.io/posts/high-performance-browser-networking-second/#http-20)
 
+[计算机基础](https://github.com/wolverinn/Waking-Up)
 
 ## 前端开发
 
-[千古壹号](https://github.com/qianguyihao/Web)最好的前端入门教程，最主要是成体系
+[千古壹号](https://github.com/qianguyihao/Web) 最好的前端入门教程，最主要是成体系
 
-[Flex布局教程：语法篇](http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html)弹性布局讲的最好的
-
-[freecodecamp](https://learn.freecodecamp.org/)上完成题目熟悉前端代码
+[Flex布局教程：语法篇](http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html) 弹性布局讲的最好的
 
 [阿里的中后台UI组件库](https://github.com/ant-design/ant-design)源码、[Taro-UI](https://github.com/NervJS/taro-ui)源码、[iview](https://github.com/iview/iview)UI组件学习
 
 [冴羽的博客](https://github.com/mqyqingfeng/Blog)
 
+[KieSun](https://github.com/KieSun/Dream)
+
+[前端面试题](https://github.com/haizlin/fe-interview)
+
 
 ## 后台开发
 
-[纯洁的微笑](http://www.ityouknow.com/)精通微服务架构
-
 [advanced-java](https://github.com/doocs/advanced-java)分布式，高并发，微服务讲解最清晰的
 
+[JavaGuide](https://github.com/Snailclimb/JavaGuide)后端知识将的更全面
 
+[CS-Notes](https://github.com/CyC2018/CS-Notes)
 
-## 数字货币
+[后端框架源码解析](https://github.com/doocs/source-code-hunter)
 
-[加密货币的本质](http://www.ruanyifeng.com/blog/2018/01/cryptocurrency-tutorial.html)
-
-[比特币入门教程](http://www.ruanyifeng.com/blog/2018/01/bitcoin-tutorial.html)
-
-[区块链入门教程](http://www.ruanyifeng.com/blog/2017/12/blockchain-tutorial.html)
-
-
-## 
+[awesome-architecture](https://github.com/toutiaoio/awesome-architecture)
 
 
 ## 知名博客
 
 [冰霜之地](https://halfrost.com/)
 
-[MacTalk](http://macshuo.com)
+[draveness](https://draveness.me/) 早期iOS,现大多是后台相关
 
-[游戏开发随笔](https://zhuanlan.zhihu.com/gu-yu)
-
-[draveness](https://github.com/draveness/draveness)
+[xuebaonline](https://www.xuebaonline.com)  swift文章比较多
 
 [美团技术团队](https://tech.meituan.com/)
 
-[evilimo](https://www.evilimo.com/)
+[ruanyifeng](http://www.ruanyifeng.com/) 前端大神
 
-[xuebaonline](https://www.xuebaonline.com)
+[Dirtmelon](https://dirtmelon.github.io/)
 
-[ruanyifeng](http://www.ruanyifeng.com/)
+[wenghengcong](https://wenghengcong.com/)
 
-## UI与产品论坛
+[刘望舒](http://liuwangshu.cn/) 安卓的大神
 
-[优设](https://www.uisdc.com/)[zool](https://www.zcool.com.cn/)[花瓣](https://huaban.com/)
+[纯洁的微笑](http://www.ityouknow.com/)精通微服务架构,现在呵呵
 
-[产品](http://www.woshipm.com/)[pmcaff](https://www.pmcaff.com/)
+## 论坛与工具
 
-[薪酬可视化](https://duibiao.info/visualization)
+[优设](https://www.uisdc.com/)		[zool](https://www.zcool.com.cn/)		[花瓣](https://huaban.com/)     [薪酬可视化](https://duibiao.info/visualization)
 
-## 工具
+[产品](http://www.woshipm.com/)		[pmcaff](https://www.pmcaff.com/)
 
-接口管理测试平台[yapi](https://github.com/YMFE/yapi)
+[MacTalk](http://macshuo.com)
 
+[yapi](https://github.com/YMFE/yapi)接口管理测试平台
 
-
-下面这张图介绍了对象，类与元类之间的关系。
-
-![img](https://img.draveness.me/2016-04-21-14611715787360.jpg)
-
-### 消息发送机制
