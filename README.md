@@ -122,6 +122,8 @@ OC的弱引用是SideTable管理，是个全局三层散列表，weak_entry_t里
 
 [跳出面向对象思想(一)继承](https://casatwy.com/tiao-chu-mian-xiang-dui-xiang-si-xiang-yi-ji-cheng.html)但是一些基本体系的继承都在使用
 
+[iOS沙盒机制](https://zhuyunsun.github.io/2020/04/21/iOS%E6%B2%99%E7%9B%92%E6%9C%BA%E5%88%B6/)
+
 ## 算法
 
 [fucking-algorithm](https://github.com/labuladong/fucking-algorithm)提出算法结题框架
