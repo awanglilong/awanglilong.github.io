@@ -134,6 +134,8 @@ OC的弱引用是SideTable管理，是个全局三层散列表，weak_entry_t里
 
 ## 设计模式
 
+[设计模式SOLID原则](https://segmentfault.com/a/1190000023114300)
+
 [图说设计模式](https://design-patterns.readthedocs.io/zh_CN/latest/)时序图对理解设计模式非常有帮助
 
 ## 计算机基础

@@ -86,13 +86,13 @@ tags:
 
 ### 1、网络请求与解析
 
-#### SDWebImage
-
-它支持从网络中下载且缓存图片，并设置图片到对应的`UIImageView`控件或者`UIButton`控件。在项目中使用`SDWebImage`来管理图片加载相关操作可以极大地提高开发效率，让我们更加专注于业务逻辑实现。
-
 #### AFNetworking
 
-`AFNetworking`是一个讨人喜欢的网络库. 它构建于在`NSURLConnection`, `NSOperation`, 以及其他熟悉的`Foundation`技术之上. 它拥有良好的架构,丰富的api,以及模块化构建方式,使得使用起来非常轻松。
+整个`AFNetworking`框架的核心类是`AFURLSessionManager`,主要封装了系统类`NSURLSession`进行网络请求。
+
+`AFURLRequestSerialization`主要功能是处理网络请求参数和请求头，做网络请求的前期处理。对应HTTP请求的Request，这种对应关系能方便了解HTTP协议的，快速理解使用框架。同时为了能创建不同类型的请求类型，使用了工厂模式。
+
+`AFURLResponseSerialization`主要功能是处理网络请求响应，做网络请求返回数据处理。为了处理JSON，XML，List等不同的返回数据，框架使用了策略模式，方便设置切换不同的解析策略。
 
 #### YYModel
 
@@ -112,6 +112,10 @@ tags:
 #### ICDataLoaderKit（自定义）
 
 `ICDataLoaderKit`将所有的网络请求以策略模式的形式，甩到壳工程里。是网络请求的数据中转中心。
+
+#### SDWebImage
+
+它支持从网络中下载且缓存图片，并设置图片到对应的`UIImageView`控件或者`UIButton`控件。在项目中使用`SDWebImage`来管理图片加载相关操作可以极大地提高开发效率，让我们更加专注于业务逻辑实现。
 
 #### ICEncryptCacheSDK (自定义)
 
