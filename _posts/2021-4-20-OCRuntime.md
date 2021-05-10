@@ -342,3 +342,138 @@ KVO通过动态子类的方式实现观察者模式。
 
 [OC语言（六）load和initialize](http://wenghengcong.com/posts/a69d9d1f/)
 
+## 七、NSClassFromString实现原理
+
+[从汇编代码探究 NSClassFromString 实现](https://juejin.cn/post/6844903686175457288#heading-27)分析NSClassFromString实现大体如下.
+
+```c
+Class _Nullable NSClassFromString(NSString *aClassName) {
+    if (!aClassName) { return Nil; }
+    
+    NSUInteger classNameLength = [aClassName length];
+    char buffer[1000];
+    
+    // @"Big\0Dog" 以及 @"🐶" 都会使得
+    // classNameLength == strlen(buffer) 不成立
+    if ([aClassName getCString:buffer maxLength:1000 encoding:NSUTF8StringEncoding]
+        && classNameLength == strlen(buffer)) {
+        return objc_lookUpClass(buffer);
+    } else if (classNameLength == 0) {
+        // 检查是否空字符串 @""，这个分支要处理的情况不太理解
+        return objc_lookUpClass([aClassName UTF8String]);
+    }
+    
+    for (int i = 0; i < classNameLength; i++) {
+        // 如果 aClassName 中含有 \0 字符，向外返回 Nil
+        // 比如 @"Big\0Dog" 的情况
+        if ([aClassName characterAtIndex:i] == 0) {
+            return Nil;
+        }
+    }
+    
+    return objc_lookUpClass([aClassName UTF8String]);
+}
+```
+
+也就是说`NSClassFromString`最终会调用`objc_lookUpClass`方法
+
+```c
+/***********************************************************************
+* look_up_class
+* Map a class name to a class using various methods.
+* This is the common implementation of objc_lookUpClass and objc_getClass, 
+* and is also used internally to get additional search options.
+* Sequence:
+* 1. class_hash
+* 2. unconnected_class_hash (optional)
+* 3. classLoader callback
+* 4. classHandler callback (optional)
+**********************************************************************/
+Class look_up_class(const char *aClassName, bool includeUnconnected, 
+                    bool includeClassHandler)
+{
+    bool includeClassLoader = YES; // class loader cannot be skipped
+    Class result = nil;
+    struct objc_class query;
+
+    query.name = aClassName;
+
+ retry:
+
+    if (!result  &&  class_hash) {
+        // Check ordinary classes
+        mutex_locker_t lock(classLock);
+        result = (Class)NXHashGet(class_hash, &query);
+    }
+
+    if (!result  &&  includeUnconnected  &&  unconnected_class_hash) {
+        // Check not-yet-connected classes
+        mutex_locker_t lock(classLock);
+        result = (Class)NXHashGet(unconnected_class_hash, &query);
+    }
+
+    if (!result  &&  includeClassLoader  &&  _objc_classLoader) {
+        // Try class loader callback
+        if ((*_objc_classLoader)(aClassName)) {
+            // Re-try lookup without class loader
+            includeClassLoader = NO;
+            goto retry;
+        }
+    }
+
+    if (!result  &&  includeClassHandler  &&  objc_classHandler) {
+        // Try class handler callback
+        if ((*objc_classHandler)(aClassName)) {
+            // Re-try lookup without class handler or class loader
+            includeClassLoader = NO;
+            includeClassHandler = NO;
+            goto retry;
+        }
+    }
+
+    return result;
+}
+```
+
+objc_lookUpClass通过一个通过NXHashGet方法，查找一个方法名的hash表.
+
+```c
+/***********************************************************************
+* getClassExceptSomeSwift
+* Looks up a class by name. The class MIGHT NOT be realized.
+* Demangled Swift names are recognized.
+* Classes known to the Swift runtime but not yet used are NOT recognized.
+*   (such as subclasses of un-instantiated generics)
+* Use look_up_class() to find them as well.
+* Locking: runtimeLock must be read- or write-locked by the caller.
+**********************************************************************/
+
+// This is a misnomer: gdb_objc_realized_classes is actually a list of 
+// named classes not in the dyld shared cache, whether realized or not.
+// This list excludes lazily named classes, which have to be looked up
+// using a getClass hook.
+NXMapTable *gdb_objc_realized_classes;  // exported for debuggers in objc-gdb.h
+
+static Class getClass_impl(const char *name)
+{
+    runtimeLock.assertLocked();
+
+    // allocated in _read_images
+    ASSERT(gdb_objc_realized_classes);
+
+    // Try runtime-allocated table
+    Class result = (Class)NXMapGet(gdb_objc_realized_classes, name);
+    if (result) return result;
+
+    // Try table from dyld shared cache.
+    // Note we do this last to handle the case where we dlopen'ed a shared cache
+    // dylib with duplicates of classes already present in the main executable.
+    // In that case, we put the class from the main executable in
+    // gdb_objc_realized_classes and want to check that before considering any
+    // newly loaded shared cache binaries.
+    return getPreoptimizedClass(name);
+}
+```
+
+
+

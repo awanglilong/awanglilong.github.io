@@ -156,7 +156,7 @@ OC的弱引用是SideTable管理，是个全局三层散列表，weak_entry_t里
 
 
 
-[计算机基础](https://github.com/wolverinn/Waking-Up)
+[计算机笔记](https://github.com/wolverinn/Waking-Up)
 
 ## 前端开发
 
