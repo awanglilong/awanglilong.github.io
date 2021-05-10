@@ -79,7 +79,7 @@ struct method_t {
 };
 ```
 
-![](/img/post-OCRuntime/objc-method-after-realize-class.jpeg)
+![](/img/post-OCRuntime/objc-method-after-realize-class.png)
 
 ### 其它参考
 
