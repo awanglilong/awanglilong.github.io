@@ -26,6 +26,8 @@
 
 [OC语言（一）Runtime](https://awanglilong.github.io/2021/04/20/OCRuntime/)  OC的消息派发主要是通过有向图，通过图上搜索的方式，复杂度最高，灵活性最好。
 
+[OC语言（一）Hook](https://awanglilong.github.io/2021/04/20/OCRuntime/)  OC的消息派发主要是通过有向图，通过图上搜索的方式，复杂度最高，灵活性最好。
+
 [OC语言（二）Block的实现](https://blog.devtang.com/2013/07/28/a-look-inside-blocks/) 
 
 [Swift（一）对象内存模型](https://mp.weixin.qq.com/s/zIkB9KnAt1YPWGOOwyqY3Q)  Swift的对象的内存模型也是结构体，复杂度比OC低 [Swift 中的类](https://www.jianshu.com/p/07f7523f2d6d)
@@ -72,9 +74,11 @@ OC的弱引用是SideTable管理，是个全局三层散列表，weak_entry_t里
 
 [AFNetworking源码解读](https://awanglilong.github.io/2021/04/21/AFNetworking-code-read/)
 
-[Aspect](https://halfrost.com/ios_aspect/#toc-17)源码分析
+[Aspect](https://halfrost.com/ios_aspect/#toc-17)源码分析  实现有点像KVO的实现原理
 
 [fishhook](https://juejin.cn/post/6844904175625568270)源码分析
+
+
 
 [Analyze](https://github.com/draveness/analyze)iOS开源框架源码分析
 
@@ -124,6 +128,8 @@ OC的弱引用是SideTable管理，是个全局三层散列表，weak_entry_t里
 
 [iOS沙盒机制](https://zhuyunsun.github.io/2020/04/21/iOS%E6%B2%99%E7%9B%92%E6%9C%BA%E5%88%B6/)
 
+[iOS App瘦身实践](https://mp.weixin.qq.com/s/xzlFQJ2b-rrw5QIszSLXXQ)
+
 ## 算法
 
 [fucking-algorithm](https://github.com/labuladong/fucking-algorithm)提出算法结题框架
@@ -148,7 +154,7 @@ OC的弱引用是SideTable管理，是个全局三层散列表，weak_entry_t里
 
 [计算机基础](https://github.com/wolverinn/Waking-Up)
 
-
+[TCP协议详解](https://www.cnblogs.com/xiaolincoding/p/12638546.html)
 
 ## 前端开发
 

@@ -79,11 +79,7 @@ struct method_t {
 };
 ```
 
-[](/img/post-OCRuntime/objc-method-after-realize-class.jpeg)
-
-
-
-![objc-method-after-realize-class](https://img.draveness.me/2016-04-23-objc-method-after-realize-class.png)
+![](/img/post-OCRuntime/objc-method-after-realize-class.jpeg)
 
 ### 其它参考
 
@@ -112,9 +108,7 @@ union isa_t {
 
 下面这张图介绍了对象，类与元类之间的关系。
 
-[](/img/post-OCRuntime/oc_object_map.jpeg)
-
-![img](https://img.draveness.me/2016-04-21-14611715787360.jpg)
+![](/img/post-OCRuntime/oc_object_map.jpeg)
 
 ### 消息发送机制
 
