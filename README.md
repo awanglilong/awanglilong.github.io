@@ -146,15 +146,17 @@ OC的弱引用是SideTable管理，是个全局三层散列表，weak_entry_t里
 
 ## 计算机基础
 
-[网络技术概览](https://dirtmelon.github.io/posts/high-performance-browser-networking-first/#%E5%BB%B6%E8%BF%9F%E4%B8%8E%E5%B8%A6%E5%AE%BD)
+[键入网址后，到网页显示](https://www.cnblogs.com/xiaolincoding/p/12508499.html)
 
-[TCP协议详解](https://github.com/awanglilong/awanglilong.github.io/issues/15)
+[TCP 三次握手和四次挥手](https://www.cnblogs.com/xiaolincoding/p/12638546.html)
 
-[HTTP](https://dirtmelon.github.io/posts/high-performance-browser-networking-second/#http-20)
+[TCP 重传、滑动窗口、流量控制、拥塞控制](https://www.cnblogs.com/xiaolincoding/p/12732052.html)
+
+[HTTP 常见的面试题](https://www.cnblogs.com/xiaolincoding/p/12442435.html)
+
+
 
 [计算机基础](https://github.com/wolverinn/Waking-Up)
-
-[TCP协议详解](https://www.cnblogs.com/xiaolincoding/p/12638546.html)
 
 ## 前端开发
 
