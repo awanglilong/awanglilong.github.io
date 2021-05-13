@@ -77,7 +77,7 @@ OC的弱引用是SideTable管理，是个全局三层散列表，weak_entry_t里
 [Aspect](https://halfrost.com/ios_aspect/#toc-17)源码分析  实现有点像KVO的实现原理
 
 [fishhook](https://juejin.cn/post/6844904175625568270)源码分析
-
+[willChangeValueForKey：中做了什么](https://www.jianshu.com/p/90af8277958a)
 
 
 [Analyze](https://github.com/draveness/analyze)iOS开源框架源码分析
