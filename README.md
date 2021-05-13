@@ -144,19 +144,49 @@ OC的弱引用是SideTable管理，是个全局三层散列表，weak_entry_t里
 
 [图说设计模式](https://design-patterns.readthedocs.io/zh_CN/latest/)时序图对理解设计模式非常有帮助
 
-## 计算机基础
+## 网络协议
+
+[IP 基础知识](https://www.cnblogs.com/xiaolincoding/p/12830287.html)
 
 [键入网址后，到网页显示](https://www.cnblogs.com/xiaolincoding/p/12508499.html)
 
 [TCP 三次握手和四次挥手](https://www.cnblogs.com/xiaolincoding/p/12638546.html)
 
+[三次握手四次挥手优化](https://www.cnblogs.com/xiaolincoding/p/13067971.html)
+
 [TCP 重传、滑动窗口、流量控制、拥塞控制](https://www.cnblogs.com/xiaolincoding/p/12732052.html)
 
-[HTTP 常见的面试题](https://www.cnblogs.com/xiaolincoding/p/12442435.html)
+[HTTP简介](https://www.cnblogs.com/xiaolincoding/p/12442435.html)
+
+[HTTP/1.1 优化](https://www.cnblogs.com/xiaolincoding/p/14442218.html)
+
+[HTTPS原理简介](https://www.cnblogs.com/xiaolincoding/p/14274353.html)
+
+[基础面试题](https://github.com/wolverinn/Waking-Up)
+
+## 操作系统
+
+[CPU 执行程序的](https://www.cnblogs.com/xiaolincoding/p/13796525.html)
+
+[CPU 缓存一致性](https://www.cnblogs.com/xiaolincoding/p/13886559.html)
+
+[零拷贝](https://www.cnblogs.com/xiaolincoding/p/13719610.html)
+
+[内存管理](https://www.cnblogs.com/xiaolincoding/p/13213699.html)
+
+[进程、线程基础知识](https://www.cnblogs.com/xiaolincoding/p/13289992.html)
+
+[多线程数据竞争](https://www.cnblogs.com/xiaolincoding/p/13346658.html)
+
+[互斥锁、自旋锁、读写锁、悲观锁、乐观锁](https://www.cnblogs.com/xiaolincoding/p/13675202.html)
+
+[进程间通信](https://www.cnblogs.com/xiaolincoding/p/13402297.html)
+
+[文件系统](https://www.cnblogs.com/xiaolincoding/p/13499209.html)
+
+[调度算法](https://www.cnblogs.com/xiaolincoding/p/13631224.html)
 
 
-
-[计算机笔记](https://github.com/wolverinn/Waking-Up)
 
 ## 前端开发
 
