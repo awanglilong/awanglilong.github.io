@@ -4,7 +4,12 @@
 
 ## AI
 https://github.com/fengdu78/deeplearning_ai_books
+
 http://www.ai-start.com/dl2017/
+
+http://www.ai-start.com/
+
+https://github.com/KeKe-Li/books
 
 ## 前端开发
 
