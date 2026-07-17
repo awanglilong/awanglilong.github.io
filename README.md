@@ -2,7 +2,9 @@
 
 ## 移动端开发
 
-
+## AI
+https://github.com/fengdu78/deeplearning_ai_books
+http://www.ai-start.com/dl2017/
 
 ## 前端开发
 
